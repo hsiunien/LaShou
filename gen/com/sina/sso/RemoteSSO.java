@@ -1,6 +1,8 @@
+/*___Generated_by_IDEA___*/
+
 /*
  * This file is auto-generated.  DO NOT MODIFY.
- * Original file: /Users/mac/Documents/AndroidWorkspace/Lashou/src/com/sina/sso/RemoteSSO.aidl
+ * Original file: /Users/mac/Git/LaShou/src/com/sina/sso/RemoteSSO.aidl
  */
 package com.sina.sso;
 public interface RemoteSSO extends android.os.IInterface

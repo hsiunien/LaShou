@@ -35,6 +35,8 @@ import com.umeng.socialize.controller.listener.SocializeListeners.SocializeClien
 import com.umeng.socialize.media.UMImage;
 
 public class MainActivity extends Activity {
+    //成功
+
 	private ViewPager viewPager;
 	private List<MenuGridItem> list1, list2;
 	private List<View> pageList;
