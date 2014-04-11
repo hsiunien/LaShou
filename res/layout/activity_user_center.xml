@@ -1,0 +1,181 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UserCenterActivity" >
+    <cn.duocool.lashou.mywidget.TitleBar
+        android:id="@+id/titleBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        rightBtn="退出登陆"
+        title="用户中心" />
+  <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:background="@drawable/background_corners"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/titleBar"
+        android:padding="1.0dip" 
+        android:layout_marginLeft="7.0dip" 
+        android:layout_marginTop="7.0dip" 
+        android:layout_marginRight="7.0dip"
+        android:layout_marginBottom="5.0dip"
+        android:orientation="vertical" >
+        <!-- 第一行  头像-->
+        <RelativeLayout android:id="@+id/setHead" android:background="@drawable/more_acitivity_item_selector_top_corners"   android:paddingTop="20dp" android:paddingLeft="13.0dip"   android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:id="@+id/lockName" android:paddingLeft="15.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="头像"    android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+            <ImageView android:id="@+id/image1" android:paddingRight="12.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/android_list_idex" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+         	<ImageView android:id="@+id/myHead" android:paddingRight="0dip" android:paddingTop="10dp" android:layout_marginRight="40dp" android:src="@drawable/axb" android:layout_width="wrap_content" android:layout_height="wrap_content"   android:layout_toLeftOf="@id/image1" android:layout_centerVertical="true" />
+        </RelativeLayout>
+        <View   style="@style/line1" />        
+        <RelativeLayout android:id="@+id/setNicName" android:background="@drawable/more_activity_item_selector_no_corners" android:paddingLeft="13.0dip" android:paddingTop="10.0dip" android:clickable="true" android:layout_width="fill_parent" android:layout_height="47.0dip">
+                    <TextView android:id="@+id/beginTime" android:paddingLeft="15.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="昵称" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+                    <ImageView android:id="@+id/image1"   android:paddingRight="12.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/android_list_idex" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+                    <TextView android:id="@+id/userName"   android:layout_marginRight="40dp"  android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="王修念" android:layout_toLeftOf="@id/image1" android:layout_centerVertical="true" />
+      		</RelativeLayout>
+      		<View   style="@style/line1" />        
+         	<RelativeLayout android:id="@+id/setpassword" android:background="@drawable/more_activity_item_selector_bottom_corners" android:paddingLeft="13.0dip" android:paddingTop="10.0dip" android:clickable="true" android:layout_width="fill_parent" android:layout_height="47.0dip">
+                    <TextView   android:paddingLeft="15.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="设置密码" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+                    <ImageView   android:paddingRight="12.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/android_list_idex" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+            </RelativeLayout>       	
+	</LinearLayout>
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:background="@drawable/background_corners"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/linearLayout1"
+        android:padding="1.0dip" 
+        android:layout_marginLeft="7.0dip" 
+        android:layout_marginTop="7.0dip" 
+        android:layout_marginRight="7.0dip"
+        android:layout_marginBottom="5.0dip"
+        android:orientation="vertical" >
+         
+        <RelativeLayout android:id="@+id/setEmail" android:background="@drawable/more_acitivity_item_selector_top_corners"  android:paddingLeft="13.0dip"  android:paddingTop="10.0dip"  android:clickable="false" android:layout_width="fill_parent" android:layout_height="47.0dip">
+            <TextView   android:paddingLeft="15.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="邮箱"    android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+            <ImageView android:id="@+id/image3" android:visibility="invisible"  android:paddingRight="12.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/android_list_idex" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+            <TextView android:id="@+id/email"   android:layout_marginRight="40dp"       android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="zens53@163.com" android:layout_toLeftOf="@id/image3" android:layout_centerVertical="true" />
+            </RelativeLayout> 
+        <View android:id="@+id/my_divide_line_2" style="@style/line1" />        
+         <RelativeLayout android:id="@+id/setPhone" android:background="@drawable/more_activity_item_selector_bottom_corners" android:paddingLeft="13.0dip" android:paddingTop="10.0dip" android:clickable="true" android:layout_width="fill_parent" android:layout_height="47.0dip">
+                    <TextView android:id="@+id/mobiletxt" android:paddingLeft="15.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="手机号" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+                    <ImageView android:id="@+id/image1"  android:paddingRight="12.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/android_list_idex" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+                    <TextView android:id="@+id/mobile"   android:layout_marginRight="40dp"  android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="13875956512" android:layout_toLeftOf="@id/image1" android:layout_centerVertical="true" />
+       </RelativeLayout>
+    </LinearLayout>  
+    
+
+    <LinearLayout
+        android:id="@+id/linearlayout3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/linearLayout2"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/background_corners"
+        android:orientation="vertical"
+        android:padding="1dp" >
+
+        <RelativeLayout
+            android:id="@+id/shareToSina"
+            android:layout_width="fill_parent"
+            android:layout_height="43.0dip"
+            android:background="@drawable/more_acitivity_item_selector_top_corners"
+            android:clickable="true"
+            android:paddingLeft="13.0dip"
+            android:paddingTop="10.0dip" >
+
+            <ImageView
+                android:id="@+id/my_collect_image"
+                android:layout_width="21.0dip"
+                android:layout_height="21.0dip"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/umeng_socialize_sina_on"
+                android:padding="5.0dip"
+                android:textSize="18.0dip" />
+
+            <TextView
+                android:id="@+id/my_collect_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/my_collect_image"
+                android:paddingLeft="15.0dip"
+                android:text="新浪账号" />
+			 <TextView
+                android:id="@+id/sinaUid"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@id/my_collect_arrow"
+                android:paddingLeft="15.0dip"
+                android:layout_marginRight="20dp"
+                android:text="zens53@163.com" />
+            <ImageView
+                android:id="@+id/my_collect_arrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:paddingRight="12.0dip"
+                android:src="@drawable/android_list_idex" />
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/line"
+            style="@style/line1" />
+
+        <RelativeLayout
+            android:id="@+id/shareToQQ"
+            android:layout_width="fill_parent"
+            android:layout_height="43.0dip"
+            android:background="@drawable/more_activity_item_selector_bottom_corners"
+            android:clickable="true"
+            android:paddingLeft="13.0dip"
+            android:paddingTop="10.0dip" >
+
+            <ImageView
+                android:id="@+id/my_collect_image"
+                android:layout_width="21.0dip"
+                android:layout_height="21.0dip"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/umeng_socialize_qq_on"
+                android:padding="5.0dip"
+                android:textSize="18.0dip" />
+
+            <TextView
+                android:id="@+id/my_collect_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/my_collect_image"
+                android:paddingLeft="15.0dip"
+                android:text="QQ账号" />
+			 <TextView
+                android:id="@+id/qqUid"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@id/my_collect_arrow"
+                android:paddingLeft="15.0dip"
+                android:layout_marginRight="20dp"
+                android:text="未绑定" />
+            <ImageView
+                android:id="@+id/my_collect_arrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:paddingRight="12.0dip"
+                android:src="@drawable/android_list_idex" />
+        </RelativeLayout>
+    </LinearLayout>
+  
+</RelativeLayout>

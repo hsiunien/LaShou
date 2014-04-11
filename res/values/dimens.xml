@@ -1,0 +1,25 @@
+<resources>
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <!-- 方块的尺寸 -->
+    <dimen name="box_size_w">100dip</dimen>
+    <dimen name="box_size_h">100dip</dimen>
+    <!-- 方框区域间隔 -->
+    <dimen name="box_size_space">5dip</dimen>
+     <!-- 方框区域距离左边和上边的距离 -->
+    <dimen name="box_left_margin">20dip</dimen>
+    <dimen name="box_top_margin">20dip</dimen>
+             <!-- 设置图形密码锁界面字体大小 -->
+        <dimen name="pt_size">20sp</dimen>
+       <dimen name="fpwd_size">14sp</dimen>
+           <!-- 设置图形密码锁界面线大小 -->
+        <dimen name="pwd_line_size">5dip</dimen>
+        <dimen name="tip_width">190dip</dimen>
+        <dimen name="tip_height">50dip</dimen>
+        <!-- 时间限制提示的y坐标 -->
+         <dimen name="tip_y">200dip</dimen> 
+    
+</resources>

@@ -1,0 +1,70 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ImageView 
+        android:id="@+id/homeBg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/main_bg"
+        android:scaleType="fitXY"
+        />
+
+    <cn.duocool.lashou.view.box.BoxGridView
+        android:id="@+id/boxGridView1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+ 
+        android:layout_centerVertical="true"        
+        >
+    </cn.duocool.lashou.view.box.BoxGridView>
+<ImageView
+	    android:id="@+id/myInfo"
+	    android:layout_width="60dp"
+	    android:layout_height="60dp"
+	    android:layout_alignParentRight="true"
+	    android:layout_alignParentTop="true"
+	    android:layout_marginRight="19dp"
+	    android:layout_marginTop="52dp"
+	    android:padding="4dp"
+	    android:background="@android:color/darker_gray"
+	    android:src="@drawable/umeng_socialize_default_avatar" />
+  <LinearLayout
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_alignParentBottom="true"
+      android:layout_centerHorizontal="true"
+      android:orientation="horizontal"
+      android:id="@+id/circleChange"
+      >
+      <TextView
+          android:layout_width="20dp"
+          android:layout_height="20dp"
+          android:background="@drawable/circle_1"
+          android:layout_marginLeft="10dp"
+          android:layout_marginRight="10dp"
+          android:layout_marginBottom="20dp"
+           />
+      <TextView
+          android:layout_width="20dp"
+          android:layout_height="20dp"
+          android:background="@drawable/circle_0"
+          android:layout_marginLeft="10dp"
+          android:layout_marginRight="10dp"
+          android:layout_marginBottom="20dp"
+           />
+  </LinearLayout>
+
+  <TextView
+      android:id="@+id/toLogin"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_alignLeft="@+id/myInfo"
+      android:layout_alignRight="@+id/myInfo"
+      android:layout_below="@+id/myInfo"
+      android:gravity="center"
+      android:visibility="gone"
+      android:textColor="#eeeeee"
+      android:text="去看看" />
+	
+</RelativeLayout>

@@ -1,0 +1,28 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <cn.duocool.lashou.mywidget.TitleBar
+        android:id="@+id/activity_show_tarck_titleBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        title="家人足迹" >
+    </cn.duocool.lashou.mywidget.TitleBar>
+
+    <com.baidu.mapapi.map.MapView
+        android:id="@+id/activity_show_track_bmapsView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/activity_show_tarck_titleBar"
+        android:clickable="true" >
+    </com.baidu.mapapi.map.MapView>
+
+    <ListView
+        android:id="@+id/activity_show_track_lisview_01"
+        android:layout_width="90dip"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/activity_show_tarck_titleBar" >
+    </ListView>
+
+</RelativeLayout>

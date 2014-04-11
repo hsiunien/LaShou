@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content" >
+
+    <ImageView
+        android:id="@+id/electronic_fence_imageview_01"
+        android:layout_width="60dip"
+        android:layout_height="60dip"
+        android:layout_margin="5dip"
+        android:padding="1dp"
+        android:background="@drawable/bg_border"
+        android:scaleType="fitXY"
+        android:src="@drawable/map" >
+    </ImageView>
+
+    <ImageView
+        android:id="@+id/electronic_fence_imageview_02"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_margin="5dip"
+        android:scaleType="fitXY"
+        android:src="@drawable/go" >
+    </ImageView>
+
+    <TextView
+        android:id="@+id/electronic_fence_textview_01"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/electronic_fence_imageview_01"
+        android:layout_marginLeft="5dip"
+        android:layout_marginRight="5dip"
+        android:layout_toLeftOf="@id/electronic_fence_imageview_02"
+        android:layout_toRightOf="@id/electronic_fence_imageview_01"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:text="!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/electronic_fence_textview_02"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/electronic_fence_textview_01"
+        android:layout_marginLeft="5dip"
+        android:layout_marginRight="5dip"
+        android:layout_marginTop="2dip"
+        android:layout_toLeftOf="@id/electronic_fence_imageview_02"
+        android:layout_toRightOf="@id/electronic_fence_imageview_01"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:text="!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/electronic_fence_textview_03"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/electronic_fence_textview_02"
+        android:layout_marginLeft="5dip"
+        android:layout_marginRight="5dip"
+        android:layout_marginTop="2dip"
+        android:layout_toLeftOf="@id/electronic_fence_imageview_02"
+        android:layout_toRightOf="@id/electronic_fence_imageview_01"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:text="!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
+        android:textSize="15sp" />
+
+</RelativeLayout>

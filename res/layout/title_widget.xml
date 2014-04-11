@@ -1,0 +1,44 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="45.0dip"
+    >
+
+    <!-- 背景 -->
+    <ImageView
+        android:id="@+id/imgbg"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@drawable/blue_title_bg" />
+    <!-- 左边 按钮 -->
+
+    <ImageView
+        android:id="@+id/btnBack"
+        style="@style/title_clickable"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:clickable="true"
+        android:src="@drawable/left_button" />
+    
+    <TextView 
+        android:id="@+id/titleBar_title"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        style="@style/layout_title"
+        />
+    
+    <Button
+        android:id="@+id/title_btnRight"
+        style="@style/title_clickable"
+        android:textSize="14sp"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:textColor="#ffffff" />
+
+</RelativeLayout>

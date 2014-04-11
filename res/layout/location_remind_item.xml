@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content" >
+
+    <ImageView
+        android:id="@+id/location_remind_imageview_01"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_margin="5dip"
+        android:scaleType="fitXY"
+        android:src="@drawable/icon_in" >
+    </ImageView>
+
+    <ImageView
+        android:id="@+id/location_remind_imageview_02"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_margin="5dip"
+        android:scaleType="fitXY"
+        android:src="@drawable/go" >
+    </ImageView>
+
+    <TextView
+        android:id="@+id/location_remind_textview_01"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dip"
+        android:layout_marginRight="5dip"
+        android:layout_marginTop="2dip"
+        android:layout_toLeftOf="@id/location_remind_imageview_02"
+        android:layout_toRightOf="@id/location_remind_imageview_01"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:text="1111"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/location_remind_textview_02"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/location_remind_textview_01"
+        android:layout_marginLeft="5dip"
+        android:layout_marginRight="5dip"
+        android:layout_marginTop="2dip"
+        android:layout_toLeftOf="@id/location_remind_imageview_02"
+        android:layout_toRightOf="@id/location_remind_imageview_01"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:text="2222"
+        android:textSize="12sp" />
+
+</RelativeLayout>

@@ -1,0 +1,300 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <cn.duocool.lashou.mywidget.TitleBar
+        android:id="@+id/activity_add_electronic_titleBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        rightBtn="保存"
+        title="添加电子围栏" >
+    </cn.duocool.lashou.mywidget.TitleBar>
+
+    <LinearLayout
+        android:id="@+id/activity_add_electronic_linearLayout_01"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/activity_add_electronic_titleBar"
+        android:layout_marginBottom="5.0dip"
+        android:layout_marginLeft="7.0dip"
+        android:layout_marginRight="7.0dip"
+        android:layout_marginTop="7.0dip"
+        android:background="@drawable/background_corners"
+        android:orientation="vertical"
+        android:padding="1.0dip" >
+
+        <!-- 第一行  设置标题 -->
+
+        <RelativeLayout
+            android:id="@+id/setTitle"
+            android:layout_width="fill_parent"
+            android:layout_height="43.0dip"
+            android:background="@drawable/more_acitivity_item_selector_top_corners"
+            android:clickable="true"
+            android:paddingLeft="13.0dip"
+            android:paddingTop="10.0dip" >
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:paddingLeft="15.0dip"
+                android:text="标      题：" />
+
+            <ImageView
+                android:id="@+id/linearLayout_01_image1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:paddingRight="12.0dip"
+                android:src="@drawable/android_list_idex" />
+
+            <TextView
+                android:id="@+id/title_String"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/linearLayout_01_image1"
+                android:layout_toRightOf="@id/title"
+                android:ellipsize="end"
+                android:paddingLeft="5dp"
+                android:paddingRight="15dp"
+                android:singleLine="true"
+                android:text="我的位置提醒" />
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/linearLayout_01_my_divide_line_1"
+            style="@style/line1" />
+
+        <!-- 第二行 设置提醒人 -->
+
+        <RelativeLayout
+            android:id="@+id/setPerson"
+            android:layout_width="fill_parent"
+            android:layout_height="43.0dip"
+            android:background="@drawable/more_activity_item_selector_bottom_corners"
+            android:clickable="true"
+            android:paddingLeft="13.0dip"
+            android:paddingTop="10.0dip" >
+
+            <TextView
+                android:id="@+id/person"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:paddingLeft="15.0dip"
+                android:text="关心对象:" />
+
+            <ImageView
+                android:id="@+id/linearLayout_01_image2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:paddingRight="12.0dip"
+                android:src="@drawable/android_list_idex" />
+
+            <TextView
+                android:id="@+id/person_String"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/linearLayout_01_image2"
+                android:layout_toRightOf="@id/person"
+                android:ellipsize="end"
+                android:paddingLeft="5dp"
+                android:paddingRight="15dp"
+                android:singleLine="true"
+                android:text="请选择关心对象" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/activity_add_electronic_linearLayout_02"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/activity_add_electronic_linearLayout_01"
+        android:layout_marginBottom="5.0dip"
+        android:layout_marginLeft="7.0dip"
+        android:layout_marginRight="7.0dip"
+        android:layout_marginTop="7.0dip"
+        android:background="@drawable/background_corners"
+        android:orientation="vertical"
+        android:padding="1.0dip" >
+
+        <!-- 第一行  设置中心点 -->
+
+        <RelativeLayout
+            android:id="@+id/setPoint"
+            android:layout_width="fill_parent"
+            android:layout_height="43.0dip"
+            android:background="@drawable/more_acitivity_item_selector_top_corners"
+            android:clickable="true"
+            android:paddingLeft="13.0dip"
+            android:paddingTop="10.0dip" >
+
+            <TextView
+                android:id="@+id/point"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:paddingLeft="15.0dip"
+                android:text="中  心  点:" />
+
+            <ImageView
+                android:id="@+id/linearLayout_02_image1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:paddingRight="12.0dip"
+                android:src="@drawable/android_list_idex" />
+
+            <TextView
+                android:id="@+id/point_String"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/linearLayout_02_image1"
+                android:layout_toRightOf="@id/point"
+                android:ellipsize="end"
+                android:paddingLeft="5dp"
+                android:paddingRight="15dp"
+                android:singleLine="true"
+                android:text="当前的位置" />
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/linearLayout_02_my_divide_line_1"
+            style="@style/line1" />
+
+        <!-- 第二行 设置半径 -->
+
+        <RelativeLayout
+            android:id="@+id/setR"
+            android:layout_width="fill_parent"
+            android:layout_height="43.0dip"
+            android:background="@drawable/more_activity_item_selector_bottom_corners"
+            android:clickable="true"
+            android:paddingLeft="13.0dip"
+            android:paddingTop="10.0dip" >
+
+            <TextView
+                android:id="@+id/r"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:paddingLeft="15.0dip"
+                android:text="半      径：" />
+
+            <ImageView
+                android:id="@+id/linearLayout_02_image2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:paddingRight="12.0dip"
+                android:src="@drawable/android_list_idex" />
+
+            <TextView
+                android:id="@+id/r_String"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/linearLayout_02_image2"
+                android:layout_toRightOf="@id/r"
+                android:ellipsize="end"
+                android:paddingLeft="5dp"
+                android:paddingRight="15dp"
+                android:singleLine="true"
+                android:text="500m" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/activity_add_electronic_linearLayout_03"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/activity_add_electronic_linearLayout_02"
+        android:layout_marginBottom="5.0dip"
+        android:layout_marginLeft="7.0dip"
+        android:layout_marginRight="7.0dip"
+        android:layout_marginTop="7.0dip"
+        android:background="@drawable/background_corners"
+        android:orientation="vertical"
+        android:padding="1.0dip" >
+
+        <!-- 第一行  设置进入提醒 -->
+
+        <RelativeLayout
+            android:id="@+id/setEnter"
+            android:layout_width="fill_parent"
+            android:layout_height="43.0dip"
+            android:background="@drawable/more_acitivity_item_selector_top_corners"
+            android:clickable="false"
+            android:paddingLeft="13.0dip"
+            android:paddingTop="10.0dip" >
+
+            <TextView
+                android:id="@+id/enterString"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:paddingLeft="15.0dip"
+                android:text="进入该区域时通知我" />
+
+            <cn.duocool.lashou.mywidget.WiperSwitch
+                android:id="@+id/activity_add_electronic_linearLayout_03_wiperSwitch_enter"
+                android:layout_width="75dip"
+                android:layout_height="35dip"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="12dip" />
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/linearLayout_03_my_divide_line_1"
+            style="@style/line1" />
+
+        <!-- 第二行 设置离开提醒 -->
+
+        <RelativeLayout
+            android:id="@+id/setLeave"
+            android:layout_width="fill_parent"
+            android:layout_height="43.0dip"
+            android:background="@drawable/more_activity_item_selector_bottom_corners"
+            android:clickable="false"
+            android:paddingLeft="13.0dip"
+            android:paddingTop="10.0dip" >
+
+            <TextView
+                android:id="@+id/leaveString"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:paddingLeft="15.0dip"
+                android:text="离开该区域时通知我" />
+
+            <cn.duocool.lashou.mywidget.WiperSwitch
+                android:id="@+id/activity_add_electronic_linearLayout_03_wiperSwitch_leave"
+                android:layout_width="75dip"
+                android:layout_height="35dip"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="12dip" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 方块的尺寸 -->
+    <dimen name="box_size_w">150dip</dimen>
+    <dimen name="box_size_h">150dip</dimen>
+</resources>

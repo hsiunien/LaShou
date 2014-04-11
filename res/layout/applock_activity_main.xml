@@ -1,0 +1,48 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    <cn.duocool.lashou.mywidget.TitleBar
+        android:id="@+id/titleBar1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true" 
+        title="主  锁"
+        >
+     </cn.duocool.lashou.mywidget.TitleBar>
+     <TextView 
+         android:id="@+id/title1"
+         android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/titleBar1"
+        android:layout_marginLeft="10dip"
+        android:text="程序列表"
+        android:textColor="#33B5E5"
+        android:textSize="18dip"
+        android:padding="5dip"
+        />
+     <cn.duocool.lashou.mywidget.WiperSwitch
+        android:id="@+id/wiperSwitch1"
+        android:layout_width="75dp"
+        android:layout_height="28dp"
+         android:layout_alignBottom="@id/title1"
+        android:paddingBottom="3dip"
+    
+        android:layout_alignParentRight="true"
+       
+       />
+      <View android:id="@+id/title_line1" style="@style/line2"  android:layout_below="@id/title1"/>
+    
+    
+    <ListView
+        android:id="@+id/listView1"
+        android:layout_below="@id/title1"
+        android:layout_marginTop="3dip"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+    </ListView>
+
+     
+</RelativeLayout>

@@ -1,0 +1,35 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <cn.duocool.lashou.mywidget.TitleBar
+        android:id="@+id/activity_set_electronic_fence_title_titleBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        rightBtn="确定"
+        title="设置提醒标题" >
+    </cn.duocool.lashou.mywidget.TitleBar>
+
+    <EditText
+        android:id="@+id/activity_set_electronic_fence_title_edittext"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/activity_set_electronic_fence_title_titleBar"
+        android:gravity="top"
+        android:hint="请输入提醒标题…" >
+    </EditText>
+
+    <TextView
+        android:id="@+id/shengyuzishu"
+        android:layout_width="40dip"
+        android:layout_height="30dip"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="10dip"
+        android:layout_marginRight="10dip"
+        android:background="@drawable/button_bg"
+        android:clickable="true"
+        android:gravity="center" >
+    </TextView>
+
+</RelativeLayout>

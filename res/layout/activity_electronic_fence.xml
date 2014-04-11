@@ -1,0 +1,31 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <cn.duocool.lashou.mywidget.TitleBar
+        android:id="@+id/titleBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        rightBtn=""
+        rightBtnBg="@drawable/electronic_fence_title_right_button_xml"
+        title="电子围栏" >
+    </cn.duocool.lashou.mywidget.TitleBar>
+
+    <TextView
+        android:id="@+id/activity_electronic_fence_tips_clean"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/titleBar"
+        android:background="@drawable/maptipbox"
+        android:gravity="center"
+        android:text="还没有建提醒，请先添加！"
+        android:textColor="#ffffffff" />
+
+    <ListView
+        android:id="@+id/activity_electronic_fence_list_01"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/titleBar" >
+    </ListView>
+
+</RelativeLayout>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content" >
+
+    <TextView
+        android:id="@+id/track_item_textview_01"
+        android:layout_width="90dip"
+        android:layout_height="30dip"
+        android:background="#C0C0C0"
+        android:gravity="center"
+        android:singleLine="true"
+        android:text="10-13 00:05"
+        android:textSize="12sp" />
+
+</RelativeLayout>

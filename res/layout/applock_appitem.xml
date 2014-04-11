@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+   >
+    
+<ImageView
+    android:layout_width="40dip"
+    android:layout_height="40dip"
+    android:id="@+id/iv"
+ 
+      android:layout_centerVertical="true"
+    android:layout_marginLeft="10dip"
+    />
+   <LinearLayout
+         android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/iv"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+     
+        android:paddingLeft="10dp"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:id="@+id/bigtv"
+           android:layout_gravity="center_vertical"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+           
+            android:id="@+id/smalltv"
+            />
+    </LinearLayout>
+
+     <cn.duocool.lashou.mywidget.WiperSwitch
+        android:id="@+id/wiperSwitch1"
+        android:layout_width="75dp"
+        android:layout_height="28dp"
+       
+        android:layout_centerInParent="true"
+        android:layout_alignParentRight="true"
+       
+       />
+
+   
+
+</RelativeLayout>

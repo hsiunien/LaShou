@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">拉手</string>
+    <string name="main_tip_text1">点击上面的图标开始</string>
+    <string name="copyright">Copyright © 2013 Lashou All Rights Reserved</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="menu_settings">Settings</string>
+    <string name="login">登录</string>
+    <string name="appLock">加把锁</string>
+    <string name="digitalFence">电子围栏</string>
+    <string name="friendLocation">孩子去哪了</string>
+    <string name="setting">一起来探索</string>
+    <string name="setedition">设定版本</string>
+    <string name="cancel">取消</string>
+    <string name="share">告诉朋友吧</string>
+    <string name="exitSystem">退出系统</string>
+    <string name="theme">换个心情</string>
+    <string name="suggest">给点建议吧</string>
+    <string name="aboutandhelp">关于和帮助</string>
+    <string name="regeist">注册</string>
+    <string name="Loading">正在获取数据...</string>
+    <string name="testTitleStr">测试内容</string>
+    <string name="testText">0*0</string>
+    <string name="connectError">网络连接失败</string>
+    <string name="applock_question">问题：</string>
+    <string name="applock_answer">答案：</string>
+    <string name="passwordLock">密码锁</string>
+    <string name="imageLock">图形锁</string>
+    <string name="nickName">昵称</string>
+    <string name="email">E-mail</string>
+    <string name="phoneNumber">手机</string>
+    <string name="password">密码</string>
+    <string name="showPwd">显示密码</string>
+    <string name="headPhoto">头像</string>
+    <string name="inputyouremail">输入您的邮箱/手机号码</string>
+    <string name="inputyourpassword">输入您的密码</string>
+    <string name="title_activity_user_center">UserCenterActivity</string>
+    <string name="title_activity_friend_list">FriendLIstActivity</string>
+    <string name="title_activity_about_and_helper">AboutAndHelperActivity</string>
+    <string name="title_activity_add_friend">AddFriendActivity</string>
+    <!-- 程序更新部分用 -->
+    <string name="title_activity_friend_info">FriendInfoActivity</string>
+    <string name="apk_now_version_title">现在版本</string>
+    <string name="apk_update_network_msg_bad">当前没有网络连接，不能检查最新版本。</string>
+    <string name="apk_update_dialog_title">程序更新</string>
+    <string name="apk_update_dialog_btn_ok">确定</string>
+    <string name="apk_update_dialog_btn_update">更新</string>
+    <string name="apk_update_dialog_btn_cancel">取消</string>
+    <string name="apk_update_download_title">正在更新中</string>
+    <string name="apk_update_download_message">下载应用中</string>
+    <string name="apk_update_no_update">已经是最新版本</string>
+    <string name="title_activity_advitise">建议反馈</string>
+    <string name="yourContectInfo">你的联系方式</string>
+    <string name="name">姓名</string>
+    <string name="yourContectInfoTip">您的QQ或者邮箱</string>
+    <string name="title_activity_theme">主题</string>
+    <string name="noPermission_toShow">您没有对对方授权查看</string>
+    <string name="havePermission_toShow">您已经对对方授权查看</string>
+    <string name="share_link">http://www.duocool.cn/lashouserver/lashou.html</string>
+    <string name="share_conent">好东西，就和更多父母分享！ “拉手”是一款安装在智能手机和平板电脑上面，对孩子使用智能手机和平板电脑进行时间管理和程序应用管理，并可以对孩子的实时位置和历史足迹进行查询以及设定孩子的安全活动范围的软件。来下载“拉手”试试吧！http://www.duocool.cn/lashouserver/lashou.html</string>
+    <!-- 电子围栏部分用 -->
+    <string name="eletronic_fence_dialog_title">提示</string>
+    <string name="eletronic_fence_dialog_msg">使用该功能需要登录，请先登录！</string>
+    <string name="eletronic_fence_delete_title">删除此提醒</string>
+    <string name="eletronic_fence_delete_success">删除电子围栏成功</string>
+    <string name="eletronic_fence_delete_bad">删除电子围栏失败，请稍后再试！</string>
+    <string name="reg_hint_email">邮箱和手机不能全为空</string>
+    <string name="reg_hint_notnull">必填</string>
+
+    <!-- 版本设定用 -->
+    <string name="EditionChildName">少儿版</string>
+    <string name="EditionParentName">家长版</string>
+    <string name="EditionTip">重要提醒!!!</string>
+    <string name="EditionTipContext">安装少儿版的智能手机和平板电脑是“拉手”默认WIFI和3G/4G网数据络24小时联网，以便少儿版用户的智能设备上传实时位置和足迹数据。为避免产生不必要的3G/4G网络流量费用，家长可以根据实际需要，在设置里面设定少儿版用户不连接WIFI和3G/4G网络的时间，并尽量选择使用WIFI连接网络。例如家长在可以确定孩子的位置时候（在家或者在校）的时间段设置为3G/4G网络不可用时间段。</string>
+	<string name="EditionTipBtnOk">确定</string>
+
+    <!-- 程序锁部分用 -->
+    <string name="lockShowName">锁</string>
+    <string name="lockQuestionDefValue">无</string>
+    <string name="lockAppMainLoadingTitle">请稍等...</string>
+    <string name="lockAppMainLoadingMsg">正在获取手机中的应用数据...</string>
+    <string name="lockAppSettingWeekTitle">请选择可用的星期\n(一周哪几天可以使用):</string>
+    <string name="lockAppSettingWeekSelectTip">请选择</string>
+    <string name="lockAppSettingWeek0">星期日</string>
+    <string name="lockAppSettingWeek1">星期一</string>
+    <string name="lockAppSettingWeek2">星期二</string>
+    <string name="lockAppSettingWeek3">星期三</string>
+    <string name="lockAppSettingWeek4">星期四</string>
+    <string name="lockAppSettingWeek5">星期五</string>
+    <string name="lockAppSettingWeek6">星期六</string>
+    <string name="lockAppSettingWeekS0">日</string>
+    <string name="lockAppSettingWeekS1">一</string>
+    <string name="lockAppSettingWeekS2">二</string>
+    <string name="lockAppSettingWeekS3">三</string>
+    <string name="lockAppSettingWeekS4">四</string>
+    <string name="lockAppSettingWeekS5">五</string>
+    <string name="lockAppSettingWeekS6">六</string>
+    <string name="lockAppSettingUseTimeTip">无</string>
+    <string name="lockAppSettingHour">小时</string>
+    <string name="lockAppSettingMinute">分钟</string>
+    <string name="lockAppSettingHour2">点</string>
+    <string name="lockAppSettingMinute2">分</string>
+    <string name="lockAppSettingSelectLockTitle">请选择程序一个程序锁</string>
+    <string name="lockAppSettingbtnOK">确定</string>
+    <string name="lockAppSettingbtnCancel">取消</string>
+    <string name="lockAppSettingTimeSegmentTitleBarTtitle1">设定可用时间段</string>
+    <string name="lockAppSettingTimeSegmentTitleBarTtitle2">设定不可用时间段</string>
+    <string name="lockAppSettingTimeSegmentDelConfirmTip">您确定要删除这个时间段吗？</string>
+    <string name="lockAppSettingTimeSegmentError01Tip">开始时间不能在结束时间之后！</string>
+    <string name="lockAppSettingTimeSegmentError02Tip">开始时间不能与结束时间相等！</string>
+    <string name="lockAppSettingTimeSegmentError03Tip">时间段已经存在！</string>
+    <string name="lockAppSettingTimeSegmentError04Tip">时间段有重叠！</string>
+
+    <!-- 设备管理器部分用 -->
+    <string name="deviceAdmin1">拉手 只是为了防止卸载，不会做任何操作。</string>
+    <string name="deviceAdmin2">拉手 只是为了防止卸载，不会做任何操作。</string>
+    <string name="deviceAdminEnable">拉手已经加固处理</string>
+    <string name="deviceAdminDisable">拉手已经解除了加固</string>
+
+    <!-- 联系我们 -->
+    <string name="company_title">关于我们</string>
+    <string name="company_copyright">版权所有 2013@米来网络科技（长沙）有限公司</string>
+    <string name="company_name">米来网络科技（长沙）有限公司</string>
+    <string name="company_btn">确定</string>
+
+    <!-- 退出系统部分用 -->
+    <string name="exit_warn_title">退出系统</string>
+    <string name="exit_warn_msg">退出拉手后,将不能享受到程序锁,家人位置信息等服务,你确定吗?</string>
+    <string name="exit_warn_btn_ok">确定</string>
+    <string name="exit_warn_btn_cancel">取消</string>
+    <string name="title_activity_upload_user_info">UploadUserInfoActivity</string>
+    <string name="title_activity_help">HelpActivity</string>
+    <string name="title_activity_start">StartActivity</string>
+
+</resources>

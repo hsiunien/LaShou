@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+   android:background="#ffffffff"
+     >
+    <cn.duocool.lashou.mywidget.TitleBar
+        android:id="@+id/titleBar1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true" 
+        title="不可用时间段"
+        >
+     </cn.duocool.lashou.mywidget.TitleBar>
+     <TextView 
+         android:id="@+id/title1"
+         android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/titleBar1"
+        android:layout_marginLeft="20dip"
+        android:text="设置时间段"
+        android:textColor="#33B5E5"
+        android:textSize="20dip"
+        android:padding="10dip"
+        />
+      <View android:id="@+id/title_line1" style="@style/line2"   android:layout_below="@id/title1"/>
+       <!-- 第一行 设置开始时间 -->
+         <RelativeLayout android:id="@+id/beginTimeRL" android:layout_below="@id/title_line1" android:background="@drawable/more_activity_item_selector_no_corners" android:paddingLeft="13.0dip" android:paddingTop="10.0dip" android:clickable="true" android:layout_width="fill_parent" android:layout_height="43.0dip">
+                    <TextView android:id="@+id/beginTime" android:paddingLeft="15.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="开始时间" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+                    
+                    <ImageView android:id="@+id/image1" android:paddingRight="12.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/android_list_idex" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+                     <TextView android:id="@+id/beginTimeTV" android:paddingRight="15dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="8:00" android:layout_toLeftOf="@id/image1" android:layout_centerVertical="true" />
+        </RelativeLayout>
+        <View android:id="@+id/my_divide_line_2" android:layout_below="@id/beginTimeRL" style="@style/line1" />
+        <!-- 第二行 设置结束时间 -->
+        <RelativeLayout android:id="@+id/endTimeRL" android:layout_below="@id/my_divide_line_2" android:background="@drawable/more_activity_item_selector_bottom_corners" android:paddingLeft="13.0dip" android:paddingTop="10.0dip" android:clickable="true" android:layout_width="fill_parent" android:layout_height="43.0dip">
+                    <TextView android:id="@+id/endTime" android:paddingLeft="15.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="结束时间" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+                    
+                    <ImageView android:id="@+id/image1" android:paddingRight="12.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/android_list_idex" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+                     <TextView android:id="@+id/endTimeTV" android:paddingRight="15dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="23:00" android:layout_toLeftOf="@id/image1" android:layout_centerVertical="true" />
+         </RelativeLayout>
+          <View android:id="@+id/line3" android:layout_below="@id/endTimeRL" style="@style/line1" />
+       
+         <!-- 第二行 添加时间段 -->
+          <RelativeLayout android:id="@+id/addperiod" android:layout_below="@id/line3" android:background="@drawable/more_activity_item_selector_bottom_corners" android:paddingLeft="13.0dip" android:paddingTop="10.0dip" android:clickable="true" android:layout_width="fill_parent" android:layout_height="43.0dip">
+                    <TextView android:id="@+id/addperiodTV"  android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="添加时间段" android:layout_centerInParent="true" android:layout_centerVertical="true" />
+                    
+          </RelativeLayout>
+           <View android:id="@+id/line5" android:layout_below="@id/addperiod" style="@style/line1" />
+       
+         <TextView 
+         android:id="@+id/title2"
+         android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/line5"
+        android:layout_marginLeft="20dip"
+        android:text="已添加时间段"
+        android:textColor="#33B5E5"
+        android:textSize="20dip"
+        android:padding="10dip"
+        />
+      <View android:id="@+id/title_line4" style="@style/line2"   android:layout_below="@id/title2"/>
+      <ListView 
+            android:id="@+id/listview"
+         android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title_line4"
+          ></ListView>
+</RelativeLayout>

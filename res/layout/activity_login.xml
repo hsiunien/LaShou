@@ -1,0 +1,212 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginActivity" >
+
+    <cn.duocool.lashou.mywidget.TitleBar
+        android:id="@+id/titleBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        rightBtn="注 册"
+        title="登    录" >
+    </cn.duocool.lashou.mywidget.TitleBar>
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/titleBar"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/background_corners"
+        android:paddingTop="20dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="10dp"
+         >
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:text="账    号" />
+
+        <EditText
+            android:id="@+id/editText1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@id/textView1"
+            android:layout_margin="10dp"
+            android:layout_toRightOf="@+id/textView1"
+            android:background="@drawable/background_corners"
+            android:ems="10"
+            android:inputType="textEmailAddress"
+            android:paddingBottom="5dp"
+            android:paddingLeft="5dp"
+            android:paddingTop="5dp"
+            android:hint="@string/inputyouremail"
+
+             />
+
+        <TextView
+            android:id="@+id/TextView01"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/textView1"
+            android:layout_below="@id/textView1"
+            android:layout_marginTop="30dp"
+            android:text="密    码 " />
+
+        <EditText
+            android:id="@+id/pwdEdit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@id/TextView01"
+            android:layout_alignLeft="@+id/editText1"
+            android:layout_alignRight="@+id/editText1"
+            android:layout_below="@+id/editText1"
+            android:background="@drawable/background_corners"
+            android:ems="10"
+            android:inputType="textPassword"
+            android:paddingBottom="5dp"
+            android:paddingLeft="5dp"
+            android:paddingTop="5dp"
+            android:hint="@string/inputyourpassword"
+            
+             >
+        </EditText>
+
+        <CheckBox
+            android:id="@+id/checkBoxShowPwd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/pwdEdit"
+            android:layout_below="@+id/pwdEdit"
+            android:layout_marginTop="5dp"
+            android:text="显示密码 " />
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btnOK"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/relativeLayout1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/black_button_selector"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp"
+        android:text="@string/login"
+        android:textColor="@android:color/white" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/relativeLayout2"
+        android:layout_below="@+id/btnOK"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="30dp"
+        android:text="您还可以用下面的账号登录" />
+
+    <LinearLayout
+        android:id="@+id/relativeLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textView2"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/background_corners"
+        android:orientation="vertical"
+        android:padding="1dp" >
+
+        <RelativeLayout
+            android:id="@+id/shareToSina"
+            android:layout_width="fill_parent"
+            android:layout_height="43.0dip"
+            android:background="@drawable/more_acitivity_item_selector_top_corners"
+            android:clickable="true"
+            android:paddingLeft="13.0dip"
+            android:paddingTop="10.0dip" >
+
+            <ImageView
+                android:id="@+id/my_collect_image"
+                android:layout_width="21.0dip"
+                android:layout_height="21.0dip"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/umeng_socialize_sina_on"
+                android:padding="5.0dip"
+                android:textSize="18.0dip" />
+
+            <TextView
+                android:id="@+id/my_collect_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/my_collect_image"
+                android:paddingLeft="15.0dip"
+                android:text="使用新浪微博登录" />
+
+            <ImageView
+                android:id="@+id/my_collect_arrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:paddingRight="12.0dip"
+                android:src="@drawable/android_list_idex" />
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/line"
+            style="@style/line1" />
+
+        <RelativeLayout
+            android:id="@+id/shareToQQ"
+            android:layout_width="fill_parent"
+            android:layout_height="43.0dip"
+            android:background="@drawable/more_activity_item_selector_bottom_corners"
+            android:clickable="true"
+            android:paddingLeft="13.0dip"
+            android:paddingTop="10.0dip" >
+
+            <ImageView
+                android:id="@+id/my_collect_image"
+                android:layout_width="21.0dip"
+                android:layout_height="21.0dip"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/umeng_socialize_qq_on"
+                android:padding="5.0dip"
+                android:textSize="18.0dip" />
+
+            <TextView
+                android:id="@+id/my_collect_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/my_collect_image"
+                android:paddingLeft="15.0dip"
+                android:text="使用QQ账号登录" />
+
+            <ImageView
+                android:id="@+id/my_collect_arrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:paddingRight="12.0dip"
+                android:src="@drawable/android_list_idex" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</RelativeLayout>

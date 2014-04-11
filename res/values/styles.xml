@@ -1,0 +1,83 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--
+        Base application theme, dependent on API level. This theme is replaced
+        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+    -->
+    <style name="AppBaseTheme" parent="android:Theme.Light">
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+        -->
+    </style>
+
+    <style name="FullHeightDialog" parent="android:style/Theme.Dialog">
+        <item name="android:windowNoTitle">true</item>
+    </style>
+    <!-- Application theme. -->
+    <style name="AppTheme" parent="AppBaseTheme">
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+    <style name="line1">
+        <item name="android:background">#ffcccccc</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">1.0dip</item>
+    </style>
+
+    <style name="line2">
+        <item name="android:background">#33B5E5</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">3.0dip</item>
+    </style>
+
+    <style name="line3">
+        <item name="android:background">#33B5E5</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">1.0dip</item>
+    </style>
+
+    <style name="title_right_button">
+        <item name="android:textColor">#ffffffff</item>
+        <item name="android:background">@drawable/promotion_right_button_background_selector</item>
+        <item name="android:layout_width">80.0dip</item>
+    </style>
+
+    <style name="title_left_button">
+        <item name="android:textColor">#ffffffff</item>
+        <item name="android:background">@drawable/promotion_right_button_background_selector</item>
+        <item name="android:layout_width">80.0dip</item>
+    </style>
+
+    <style name="title_clickable">
+        <item name="android:background">@drawable/title_button_selector</item>
+    </style>
+
+    <style name="black_buttonClick">
+        <item name="android:background">@drawable/black_button_selector</item>
+    </style>
+
+    <style name="layout_title">
+        <item name="android:textSize">22.0dip</item>
+        <item name="android:textColor">#ffffffff</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="edit_paddingStyle">
+        <item name="android:layout_margin">10dp</item>
+        <item name="android:background">@drawable/background_corners</item>
+        <item name="android:paddingBottom">5dp</item>
+        <item name="android:paddingLeft">5dp</item>
+        <item name="android:paddingTop">5dp</item>
+    </style>
+
+    <style name="theme_itemStyle">
+        <item name="android:paddingRight">15dp</item>
+        <item name="android:paddingTop">20dp</item>
+        <item name="android:paddingLeft">20dp</item>
+        <item name="android:background">@drawable/more_acitivity_item_selector_circle_corners</item>
+    </style>
+
+</resources>

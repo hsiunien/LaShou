@@ -1,0 +1,128 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffffff">
+
+<!--     <cn.duocool.lashou.mywidget.TitleBar -->
+<!--         android:id="@+id/titleBar" -->
+<!--         android:layout_width="match_parent" -->
+<!--         android:layout_height="wrap_content" -->
+<!--         title="设置版本" /> -->
+
+     <LinearLayout
+         android:id="@+id/linearLayout1"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:layout_alignParentLeft="true"
+         android:layout_below="@+id/aboutInfo"
+         android:layout_marginTop="58dp"
+         android:gravity="center"
+         android:orientation="horizontal" >
+
+         <RadioGroup
+             android:id="@+id/radioGroup1"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:orientation="horizontal" >
+
+             <RadioButton
+                 android:id="@+id/rbChild"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:text="少儿版" />
+
+             <RadioButton
+                 android:id="@+id/rbParent"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:text="家长版" />
+         </RadioGroup>
+     </LinearLayout>
+
+     <Button
+         android:id="@+id/btnOK"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:layout_below="@+id/linearLayout1"
+         android:layout_centerHorizontal="true"
+         android:layout_marginTop="43dp"
+         android:background="@drawable/black_button_selector"
+         android:onClick="onClick"
+         android:paddingBottom="10dp"
+         android:paddingTop="10dp"
+         android:layout_marginLeft="10dip"
+         android:layout_marginRight="10dip"
+         android:text="@string/setedition"
+         android:textColor="@android:color/white" />
+
+     <LinearLayout
+         android:id="@+id/aboutInfo"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:layout_alignParentLeft="true"
+         android:layout_alignParentTop="true"
+         android:layout_marginTop="58dp"
+         android:gravity="center"
+         android:orientation="vertical"
+         android:padding="10dp" >
+
+         <LinearLayout
+             android:id="@+id/helpContainer"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:layout_marginBottom="5.0dip"
+             android:layout_marginLeft="7.0dip"
+             android:layout_marginRight="7.0dip"
+             android:orientation="vertical"
+             android:padding="1.0dip" >
+         </LinearLayout>
+
+         <ImageView
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:src="@drawable/lashou100" />
+
+         <TextView
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:textColor="#ff666666" />
+
+         <LinearLayout
+             android:id="@+id/aboutInfo"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:gravity="center"
+             android:orientation="horizontal" >
+
+             <TextView
+                 android:id="@+id/TextView01"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:text="请根据您的身份选择安装对应的版本"
+                 android:textColor="#ff666666" />
+
+<!--              <TextView -->
+<!--                  android:id="@+id/editionName" -->
+<!--                  android:layout_width="wrap_content" -->
+<!--                  android:layout_height="wrap_content" -->
+<!--                  android:text="家长版" -->
+<!--                  android:textColor="#ffff0000" /> -->
+         </LinearLayout>
+     </LinearLayout>
+
+     <Button
+         android:id="@+id/btnNO"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:layout_alignLeft="@+id/btnOK"
+         android:layout_below="@+id/btnOK"
+         android:layout_marginTop="12dp"
+         android:background="@drawable/black_button_selector"
+         android:onClick="onClick"
+         android:paddingBottom="10dp"
+         android:paddingTop="10dp"
+         android:layout_marginRight="10dip"
+         android:text="@string/cancel"
+         android:textColor="@android:color/white" />
+
+</RelativeLayout>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal" >
+
+    <GridView
+        android:id="@+id/menuGridView"
+        android:layout_width="wrap_content"
+        android:layout_height="420dp"
+        android:layout_gravity="center"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="80dip"
+        android:columnWidth="120dp"
+        android:numColumns="2"
+        android:scrollbars="none"
+        android:horizontalSpacing="15dp"
+        android:verticalSpacing="15dp" >
+    </GridView>
+
+</LinearLayout>

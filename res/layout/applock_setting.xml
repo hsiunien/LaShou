@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 程序锁设置页面 -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    <cn.duocool.lashou.mywidget.TitleBar
+        android:id="@+id/titleBar1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true" 
+        title="设置"
+        >
+     </cn.duocool.lashou.mywidget.TitleBar>
+     
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:background="@drawable/background_corners"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/titleBar1"
+        android:padding="1.0dip" 
+        android:layout_marginLeft="7.0dip" 
+        android:layout_marginTop="7.0dip" 
+        android:layout_marginRight="7.0dip"
+        android:layout_marginBottom="5.0dip"
+        android:orientation="vertical" >
+        <!-- 第一行  设置名字-->
+        <RelativeLayout android:id="@+id/setName" android:background="@drawable/more_acitivity_item_selector_top_corners" android:paddingLeft="13.0dip" android:paddingTop="10.0dip" android:clickable="true" android:layout_width="fill_parent" android:layout_height="47.0dip">
+               
+                           <TextView android:id="@+id/lockName" android:paddingLeft="15.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="给锁取名字" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+                    
+                    <ImageView android:id="@+id/image1" android:paddingRight="12.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/android_list_idex" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+                     <TextView android:id="@+id/beginTimeTV" android:paddingRight="15dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="" android:layout_toLeftOf="@id/image1" android:layout_centerVertical="true" />
+      
+                    </RelativeLayout>
+        <View android:id="@+id/my_divide_line_2" style="@style/line1" />
+         <!-- 第二行 设置问题-->
+        
+         <RelativeLayout android:id="@+id/setQuestion" android:background="@drawable/more_activity_item_selector_bottom_corners" android:paddingLeft="13.0dip" android:paddingTop="10.0dip" android:clickable="true" android:layout_width="fill_parent" android:layout_height="47.0dip">
+                    <TextView android:id="@+id/beginTime" android:paddingLeft="15.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="设置密码找回问题" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+                    
+                    <ImageView android:id="@+id/image1" android:paddingRight="12.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/android_list_idex" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+                     <TextView android:id="@+id/beginTimeTV" android:paddingRight="15dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="" android:layout_toLeftOf="@id/image1" android:layout_centerVertical="true" />
+        </RelativeLayout>
+       
+        
+    </LinearLayout>
+     <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:background="@drawable/background_corners"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/linearLayout1"
+        android:padding="1.0dip" 
+        android:layout_marginLeft="7.0dip" 
+        android:layout_marginTop="7.0dip" 
+        android:layout_marginRight="7.0dip"
+        android:layout_marginBottom="5.0dip"
+        android:orientation="vertical" >
+        <!-- 第一行  密码锁-->
+        <RelativeLayout android:id="@+id/passwordLock" android:background="@drawable/more_acitivity_item_selector_top_corners" android:paddingLeft="13.0dip" android:paddingTop="10.0dip" android:clickable="true" android:layout_width="fill_parent" android:layout_height="47.0dip">
+               
+                           <TextView android:id="@+id/xxx" android:paddingLeft="15.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/passwordLock" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+                    <CheckBox android:clickable="false" android:id="@+id/pbox" android:layout_width="wrap_content" android:layout_height="wrap_content" android:paddingRight="12.0dip"    android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+                    
+                    </RelativeLayout>
+        <View android:id="@+id/my_divide_line_2" style="@style/line1" />
+         <!-- 第二行 图形锁 -->
+      
+        
+         <RelativeLayout android:id="@+id/imageLock" android:background="@drawable/more_activity_item_selector_no_corners" android:paddingLeft="13.0dip" android:paddingTop="10.0dip" android:clickable="true" android:layout_width="fill_parent" android:layout_height="47.0dip">
+                    <TextView android:id="@+id/xxxx" android:paddingLeft="15.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/imageLock" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+                      <CheckBox android:clickable="false" android:id="@+id/ibox" android:layout_width="wrap_content" android:layout_height="wrap_content" android:paddingRight="12.0dip"    android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+         </RelativeLayout>
+        <View android:id="@+id/my_divide_line_2" style="@style/line1" />
+         <!-- 第三行 设置密码-->
+        <RelativeLayout android:id="@+id/setPassword" android:background="@drawable/more_activity_item_selector_bottom_corners" android:paddingLeft="13.0dip" android:paddingTop="10.0dip" android:clickable="true" android:layout_width="fill_parent" android:layout_height="47.0dip">
+                    <TextView android:id="@+id/setPasswordTextView" android:paddingLeft="15.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="设置密码" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+                    
+                    <ImageView android:id="@+id/image1" android:paddingRight="12.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/android_list_idex" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+                     <TextView android:id="@+id/beginTimeTV" android:paddingRight="15dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="" android:layout_toLeftOf="@id/image1" android:layout_centerVertical="true" />
+       
+        </RelativeLayout>
+        
+        
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,20 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <cn.duocool.lashou.mywidget.TitleBar
+        android:id="@+id/activity_show_map_titleBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        title="我的位置提醒-地图预览" >
+    </cn.duocool.lashou.mywidget.TitleBar>
+
+    <com.baidu.mapapi.map.MapView
+        android:id="@+id/activity_show_map_bmapsView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/activity_show_map_titleBar"
+        android:clickable="true" >
+    </com.baidu.mapapi.map.MapView>
+
+</RelativeLayout>

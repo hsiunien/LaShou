@@ -1,0 +1,44 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <cn.duocool.lashou.mywidget.TitleBar
+        android:id="@+id/activity_friendlocation_titleBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        rightBtn=""
+        rightBtnBg="@drawable/friendlocation_title_right_button_xml"
+        title="家人位置" >
+    </cn.duocool.lashou.mywidget.TitleBar>
+    
+    <com.baidu.mapapi.map.MapView
+        android:id="@+id/bmapsView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/activity_friendlocation_titleBar"
+        android:clickable="true" >
+    </com.baidu.mapapi.map.MapView>
+    
+
+    <HorizontalScrollView
+        android:id="@+id/HorizontalScrollView01"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:background="@drawable/friendlocation_bg"
+        android:fadingEdgeLength="0.0dip"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:id="@+id/mainLinearLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="2dip"
+            android:layout_marginRight="2dip"
+            android:layout_marginTop="5dip"
+            android:orientation="horizontal" >
+        </LinearLayout>
+    </HorizontalScrollView>
+
+</RelativeLayout>

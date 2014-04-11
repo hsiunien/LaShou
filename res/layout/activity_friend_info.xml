@@ -1,0 +1,172 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FriendInfoActivity" >
+     <cn.duocool.lashou.mywidget.TitleBar
+        android:id="@+id/titleBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        rightBtnBg="@drawable/promotion_right_button_background_selector"
+        rightBtn="删除" 
+        title="家人查看" >
+    </cn.duocool.lashou.mywidget.TitleBar>
+     <RelativeLayout
+        android:id="@+id/relativeLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/titleBar"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/background_corners"
+        android:paddingTop="20dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="10dp"
+         >
+
+         <RelativeLayout 
+             android:layout_width="70dp"
+             android:layout_height="70dp"
+            android:layout_alignParentLeft="true"
+            android:padding="2dp"
+            android:background="#999999"
+            android:id="@+id/header"
+             >
+         <ImageView 
+             android:layout_height="match_parent"
+             android:layout_width="match_parent"
+             android:src="@drawable/axb"
+             android:id="@+id/headImg"
+             />
+         </RelativeLayout>
+         <LinearLayout 
+             android:layout_height="wrap_content"
+             android:layout_width="match_parent"
+             android:orientation="vertical"
+             android:layout_toRightOf="@id/header"
+             >
+        <TextView
+            android:id="@+id/nameTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+             />
+       		 <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                 >
+                <cn.duocool.lashou.mywidget.WiperSwitch
+                android:id="@+id/showSwitch"
+                android:layout_width="75dip"
+                android:layout_height="25dip"
+                android:layout_gravity="center_vertical"
+                />
+                <TextView
+                    android:id="@+id/switchstatus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+		</LinearLayout>
+      </RelativeLayout>
+<LinearLayout
+        android:id="@+id/relativeLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/relativeLayout1"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/background_corners"
+        android:orientation="vertical"
+        android:padding="1dp" >
+
+        <RelativeLayout
+            android:id="@+id/ckwz"
+            android:layout_width="fill_parent"
+            android:layout_height="43.0dip"
+            android:background="@drawable/more_acitivity_item_selector_top_corners"
+            android:clickable="true"
+            android:paddingLeft="13.0dip"
+            android:paddingTop="10.0dip" >
+
+            <ImageView
+                android:id="@+id/my_collect_image"
+                android:layout_width="21.0dip"
+                android:layout_height="21.0dip"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/location"
+                android:padding="5.0dip"
+                android:textSize="18.0dip" />
+
+            <TextView
+                android:id="@+id/my_collect_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/my_collect_image"
+                android:paddingLeft="15.0dip"
+                android:text="查看位置" />
+
+            <ImageView
+                android:id="@+id/my_collect_arrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:paddingRight="12.0dip"
+                android:src="@drawable/android_list_idex" />
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/line"
+            style="@style/line1" />
+
+        <RelativeLayout
+            android:id="@+id/ckzj"
+            android:layout_width="fill_parent"
+            android:layout_height="43.0dip"
+            android:background="@drawable/more_activity_item_selector_bottom_corners"
+            android:clickable="true"
+            android:paddingLeft="13.0dip"
+            android:paddingTop="10.0dip" >
+
+            <ImageView
+                android:id="@+id/my_collect_image"
+                android:layout_width="21.0dip"
+                android:layout_height="21.0dip"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/feed"
+                android:padding="5.0dip"
+                android:textSize="18.0dip" />
+
+            <TextView
+                android:id="@+id/my_collect_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/my_collect_image"
+                android:paddingLeft="15.0dip"
+                android:text="查看足迹" />
+
+            <ImageView
+                android:id="@+id/my_collect_arrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:paddingRight="12.0dip"
+                android:src="@drawable/android_list_idex" />
+        </RelativeLayout>
+    </LinearLayout>
+     
+</RelativeLayout>

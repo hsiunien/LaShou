@@ -1,0 +1,370 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="cn.duocool.lashou"
+    android:versionCode="13"
+    android:versionName="ver 1.0.13 测试版" >
+
+    <uses-sdk
+        android:minSdkVersion="10"
+        android:targetSdkVersion="18" >
+    </uses-sdk>
+
+    <supports-screens
+        android:anyDensity="true"
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:resizeable="true"
+        android:smallScreens="true" >
+    </supports-screens>
+
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <!-- ###################声明SDK使用的相关权限###################### -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- 检测网络状态 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <!-- 获取mac地址作为用户的备用唯一标识 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <!-- 获取用户手机的IMEI，用来唯一的标识用户。 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!-- 缓存资源优先存入SDcard -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- 允许应用程序联网，以便向我们的服务器端发送数据。 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <!-- 用于评论模块分享位置信息 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <!-- 用于评论模块分享位置信息 -->
+    <!-- 百度定位相关 -->
+    <permission android:name="android.permission.BAIDU_LOCATION_SERVICE" />
+
+    <uses-permission android:name="android.permission.BAIDU_LOCATION_SERVICE" />
+    <uses-permission android:name="android.permission.ACCESS_MOCK_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_GPS" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.READ_SMS" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="adnroid.permission.ACCESS_CHECKIN_PROPERTTES" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+	<uses-permission android:name="android.permission.READ_LOGS"></uses-permission>
+
+    <application
+        android:name="cn.duocool.lashou.model.MyApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/axb"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="cn.duocool.lashou.UmengHome"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+        </activity>
+
+        <!-- ###################注册SDK使用的Activity###################### -->
+        <!-- 分享编辑页 -->
+        <activity
+            android:name="com.umeng.socialize.view.ShareActivity"
+            android:configChanges="orientation|keyboard"
+            android:launchMode="singleTask"
+            android:noHistory="true"
+            android:theme="@style/Theme.UMDialog"
+            android:windowSoftInputMode="stateVisible|adjustResize" >
+        </activity>
+        <!-- ############ QQ空间和QQ SSO授权的Activity注册 ############ -->
+        <activity android:name="com.tencent.tauth.AuthActivity" />
+        <!-- ###################添加UmengAppkey###################### -->
+        <!-- <meta-data -->
+        <!-- android:name="UMENG_APPKEY" -->
+        <!-- android:value="52428a6856240b0ac5007fac" > -->
+        <!-- </meta-data> -->
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="52428a6856240b0ac5007fac" >
+        </meta-data>
+
+        <!-- ###################以下 为我么的###################### -->
+        <activity
+            android:name="cn.duocool.lashou.activity.Main"
+            android:label="@string/app_name"
+            android:launchMode="singleInstance" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+       <activity
+            android:name="cn.duocool.lashou.activity.StartActivity"
+            android:label="@string/title_activity_start" 
+            android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen"
+            >
+        </activity>
+         
+        <activity
+            android:name="cn.duocool.lashou.activity.ActivityHome"
+            android:launchMode="singleInstance"
+            android:screenOrientation="portrait" >
+        </activity>
+        <!-- 登陆界面 -->
+        <activity
+            android:name="cn.duocool.lashou.activity.LoginActivity"
+            android:label="@string/login"
+            android:screenOrientation="portrait" >
+        </activity>
+        <!-- 个人中心界面 -->
+        <activity
+            android:name="cn.duocool.lashou.activity.UserCenterActivity"
+            android:label="@string/title_activity_user_center"
+            android:screenOrientation="portrait" >
+        </activity>
+
+        <!-- 好友列表界面 -->
+        <activity
+            android:name="cn.duocool.lashou.activity.FriendListActivity"
+            android:label="@string/title_activity_friend_list"
+            android:screenOrientation="portrait" >
+        </activity>
+        <!-- 好友详细界面 -->
+        <activity
+            android:name="cn.duocool.lashou.activity.FriendInfoActivity"
+            android:label="@string/title_activity_friend_info"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="cn.duocool.lashou.activity.AboutAndHelperActivity"
+            android:label="@string/title_activity_about_and_helper"
+            android:screenOrientation="portrait" >
+        </activity>
+        <!-- 添加好友主界面 -->
+        <activity
+            android:name="cn.duocool.lashou.activity.AddFriendActivity"
+            android:label="@string/title_activity_add_friend"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="cn.duocool.lashou.activity.AdvitiseActivity"
+            android:label="@string/title_activity_advitise"
+            android:screenOrientation="portrait" >
+        </activity>
+        <!-- 主题 -->
+        <activity
+            android:name="cn.duocool.lashou.activity.ThemeActivity"
+            android:label="@string/title_activity_theme"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="cn.duocool.lashou.activity.HelpActivity"
+            android:label="@string/title_activity_help"
+             android:screenOrientation="portrait" >
+        </activity>
+
+        <!-- 程序锁主界面 -->
+        <activity
+            android:name="cn.duocool.lashou.activity.AppLockMainActivity"
+            android:label="@string/app_name"
+            android:launchMode="singleInstance"
+            android:screenOrientation="portrait" >
+        </activity>
+        <!-- 输入密码界面 -->
+        <activity
+            android:name="cn.duocool.lashou.activity.PasswordActivity"
+            android:label="@string/app_name"
+            android:launchMode="singleInstance"
+            android:screenOrientation="portrait" >
+        </activity>
+        <!-- 设置密码界面 -->
+        <activity
+            android:name="cn.duocool.lashou.activity.ApplockSetPasswordActivity"
+            android:label="@string/app_name"
+            android:launchMode="singleInstance"
+            android:screenOrientation="portrait" >
+        </activity>
+        <!-- 图形锁界面 -->
+        <activity
+            android:name="cn.duocool.lashou.activity.ImageLockActivity"
+            android:label="@string/app_name"
+            android:launchMode="singleInstance"
+            android:screenOrientation="portrait" >
+        </activity>
+        <!-- 设置号码界面 -->
+        <activity
+            android:name="cn.duocool.lashou.activity.ApplockSuperNumberActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+        </activity>
+        <!-- 设置界面 -->
+        <activity
+            android:name="cn.duocool.lashou.activity.SettingActivity"
+            android:label="@string/app_name"
+            android:launchMode="singleInstance"
+            android:screenOrientation="portrait" >
+        </activity>
+        <!-- 设置图形密码 -->
+        <activity
+            android:name="cn.duocool.lashou.activity.SetImagePasswordActivity"
+            android:label="@string/app_name"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" >
+        </activity>
+        <!-- 程序锁设置界面 -->
+        <activity
+            android:name="cn.duocool.lashou.activity.LockSettingActivity"
+            android:label="@string/app_name"
+            android:launchMode="singleInstance"
+            android:screenOrientation="portrait" >
+        </activity>
+
+        <!-- 对单个应用进行设置的界面 -->
+        <activity
+            android:name="cn.duocool.lashou.activity.ApplockSingleSetting"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+        </activity>
+        <!-- 更新设置 -->
+        <activity
+            android:name="cn.duocool.lashou.activity.UpdateUserInfoActivity"
+            android:label="@string/title_activity_upload_user_info"
+            android:screenOrientation="portrait" >
+        </activity>
+        <!-- 设置时间段界面 -->
+        <activity
+            android:name="cn.duocool.lashou.activity.ApplockSetPeriodsOfTimeActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="cn.duocool.lashou.activity.RegActivity"
+            android:label="@string/regeist"
+            android:screenOrientation="portrait" >
+        </activity>
+
+        <!-- 电子围栏的界面 -->
+        <activity
+            android:name="cn.duocool.lashou.activity.Electronic_fenceActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <!-- 添加电子围栏的界面 -->
+        <activity
+            android:name="cn.duocool.lashou.activity.AddElectronicFenceActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <!-- 设置电子围栏提醒标题的界面 -->
+        <activity
+            android:name="cn.duocool.lashou.activity.Set_Electronic_fence_TitleActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" >
+        </activity>
+        <!-- 设置电子围栏中心点的界面 -->
+        <activity
+            android:name="cn.duocool.lashou.activity.Set_Electronic_fence_PointActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <!-- 显示电子围栏Map截图的界面 -->
+        <activity
+            android:name="cn.duocool.lashou.activity.ShowMapActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <!-- 显示电子围栏进出记录的界面 -->
+        <activity
+            android:name="cn.duocool.lashou.activity.ShowMyLocationRemindActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <!-- 朋友位置的界面 -->
+        <activity
+            android:name="cn.duocool.lashou.activity.FriendLocationActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <!-- 好友足迹的界面 -->
+        <activity
+            android:name="cn.duocool.lashou.activity.ShowTrackActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+
+        <!-- 设置版本界面 -->
+        <activity
+            android:name="cn.duocool.lashou.activity.EditionSettingActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+
+        <!-- 服务区域====================================================== -->
+        <!-- 拉手服务 -->
+        <service android:name="cn.duocool.lashou.service.LashouService" >
+        </service>
+
+        <!-- 程序锁后台监控服务 -->
+        <!-- <service android:name="cn.duocool.lashou.service.LockService" > -->
+        <!-- </service> -->
+        <!-- 程序锁定倒计时服务 -->
+        <!-- <service android:name="cn.duocool.lashou.service.Applock_CountdownService" > -->
+        <!-- </service> -->
+
+
+        <!-- 定位服务 -->
+<!--         <service android:name="cn.duocool.lashou.service.LocationService" > -->
+<!--         </service> -->
+        <service android:name="cn.duocool.lashou.service.UploadLocationService" >
+        </service>
+        <!-- 百度地图定位服务 -->
+        <service
+            android:name="com.baidu.location.f"
+            android:enabled="true"
+            android:process=":remote" >
+        </service>
+        <!-- 电子围栏判断服务 -->
+        <service android:name="cn.duocool.lashou.service.ElectronicFenceService" >
+        </service>
+
+        <!-- 推动服务 -->
+        <service android:name="cn.duocool.lashou.service.PushService" >
+        </service>
+
+        <!-- ======================================================== -->
+
+
+        <!-- 广播接受器区域====================================================== -->
+
+
+        <!-- 接收短信的广播 -->
+        <receiver android:name="cn.duocool.lashou.broadcastreceiver.ShortMessageReceiver" >
+            <intent-filter android:priority="1000" >
+                <action android:name="android.provider.Telephony.SMS_RECEIVED" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name="cn.duocool.lashou.broadcastreceiver.StartupReceiver" >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+        <!-- 推送服务广播接收器 -->
+        <receiver android:name="cn.duocool.lashou.broadcastreceiver.PushReceiver" >
+            <intent-filter>
+                <action android:name="cn.duocool.lashou.service.PushService.broadcast" />
+            </intent-filter>
+        </receiver>
+
+        <!-- 防卸载 -->
+        <receiver
+            android:name="cn.duocool.lashou.broadcastreceiver.LashouDeviceAdminReceiver"
+            android:description="@string/deviceAdmin2"
+            android:permission="android.permission.BIND_DEVICE_ADMIN" >
+            <meta-data
+                android:name="android.app.device_admin"
+                android:resource="@xml/device_admin" />
+
+            <intent-filter>
+                <action android:name="android.app.action.DEVICE_ADMIN_ENABLED" />
+            </intent-filter>
+        </receiver>
+        <!-- ======================================================== -->
+    </application>
+
+</manifest>

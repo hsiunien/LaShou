@@ -1,0 +1,64 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UploadUserInfoActivity" >
+    <cn.duocool.lashou.mywidget.TitleBar
+        android:id="@+id/titleBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        rightBtn="保存"
+        title="修改个人信息" >
+    </cn.duocool.lashou.mywidget.TitleBar>	
+    <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@id/titleBar"
+        >
+         <EditText
+            android:id="@+id/changeNickName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" 
+            android:layout_margin="10dp" 
+            android:background="@drawable/background_corners"
+            android:ems="10"
+            android:inputType="textEmailAddress"
+            android:paddingBottom="10dp"
+            android:paddingLeft="10dp"
+            android:paddingTop="10dp"
+            android:hint="请输入新的昵称"
+            android:visibility="gone"
+             />
+         <EditText
+            android:id="@+id/changePwd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" 
+            android:layout_margin="10dp" 
+            android:background="@drawable/background_corners"
+            android:ems="10"
+            android:inputType="textEmailAddress"
+            android:paddingBottom="10dp"
+            android:paddingLeft="10dp"
+            android:paddingTop="10dp"
+            android:hint="请输入新密码"
+           android:visibility="gone"
+             
+             />    
+        <EditText
+            android:id="@+id/changePhone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" 
+            android:layout_margin="10dp" 
+            android:background="@drawable/background_corners"
+            android:ems="10"
+            android:inputType="textPhonetic"
+            android:paddingBottom="10dp"
+            android:paddingLeft="10dp"
+            android:paddingTop="10dp"
+            android:hint="请输入新的手机号"
+           android:visibility="gone"
+             
+             />                  
+    </LinearLayout>
+</RelativeLayout>

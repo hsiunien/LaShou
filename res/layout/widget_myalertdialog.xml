@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#eeeeee"
+    android:orientation="vertical" >
+    
+<RelativeLayout 
+    android:layout_width="match_parent"
+    android:layout_height="36dp"
+    android:background="@drawable/blue_title_bg"
+    >
+    <TextView 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/dialogTitle"
+        android:layout_centerInParent="true"
+        android:text="提示"
+        android:textColor="@android:color/white"
+        android:textSize="22sp"
+        />
+    <ImageButton 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/btn_close_xxx"
+        android:background="@drawable/title_button_selector"
+        android:layout_centerVertical="true"
+        android:id="@+id/btnClose"
+        android:layout_marginRight="10dp"
+        />
+</RelativeLayout>
+   <TextView 
+       android:id="@+id/dialogContent"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:textSize="16sp"
+       android:padding="15dp"
+       android:textColor="#333333"
+       android:text="正在加载 "
+       
+       /> 
+    <RelativeLayout 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        ><LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:orientation="horizontal"
+            android:padding="10dp" >
+
+            <Button
+                android:id="@+id/button1"
+                android:layout_width="wrap_content"
+                android:layout_height="34dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/blue_button_sector"
+                android:minWidth="100dp"
+                android:text="确定"
+                android:textColor="@android:color/white"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/button2"
+                android:layout_width="wrap_content"
+                android:layout_height="32dp"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/blue_button_sector"
+                android:minWidth="100dp"
+                android:text="取消"
+                android:textColor="@android:color/white"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+</LinearLayout>

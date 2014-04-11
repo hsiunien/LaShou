@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/dialog_view"
+    android:layout_width="160dip"
+    android:layout_height="wrap_content"
+    android:background="#F7F7F7"
+    android:gravity="center_vertical"
+    android:orientation="vertical" >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="10dp"
+        android:paddingLeft="10dp"
+        android:paddingTop="10dp"
+        android:id="@+id/titleTv"
+        android:text="请稍候..."
+        android:textColor="#33B5E5"
+        android:textSize="20sp" />
+
+    <View
+        android:id="@+id/title_line1"
+        style="@style/line3"
+        android:paddingTop="10dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="10dp" >
+
+        <ImageView
+            android:id="@+id/img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="2dip"
+            android:src="@drawable/waiting_up" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:padding="2dip"
+            android:id="@+id/contentTv"
+            android:text="@string/Loading"
+            android:textColor="#33B5E5" />
+    </LinearLayout>
+
+</LinearLayout>

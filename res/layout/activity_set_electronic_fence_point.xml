@@ -1,0 +1,60 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <cn.duocool.lashou.mywidget.TitleBar
+        android:id="@+id/activity_set_electronic_fence_point_titleBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        rightBtn="确定"
+        title="选择中心" >
+    </cn.duocool.lashou.mywidget.TitleBar>
+
+    <com.baidu.mapapi.map.MapView
+        android:id="@+id/set_point_bmapsView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/activity_set_electronic_fence_point_titleBar"
+        android:clickable="true" >
+    </com.baidu.mapapi.map.MapView>
+
+    <LinearLayout
+        android:layout_below="@id/activity_set_electronic_fence_point_titleBar"
+        android:id="@+id/activity_set_electronic_fence_point_tips"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/maptipbox"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="在您想选择的位置长按，即可选定该位置"
+            android:textColor="@android:color/white" >
+        </TextView>
+
+        <ImageButton
+            android:id="@+id/tips_clean"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="8dip"
+            android:background="@drawable/tips_clean" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/activity_set_electronic_fence_point_mylocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="20dip"
+        android:layout_marginRight="20dip"
+        android:clickable="true"
+        android:src="@drawable/activity_set_electronic_fence_point_mylocation_xml" >
+    </ImageView>
+
+</RelativeLayout>
