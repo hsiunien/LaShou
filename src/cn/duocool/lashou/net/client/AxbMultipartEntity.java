@@ -1,4 +1,4 @@
-﻿package cn.duocool.lashou.net.client;
+package cn.duocool.lashou.net.client;
 
 import java.io.IOException;
 import java.io.OutputStream;

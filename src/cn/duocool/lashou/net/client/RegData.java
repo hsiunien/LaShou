@@ -1,4 +1,4 @@
-﻿package cn.duocool.lashou.net.client;
+package cn.duocool.lashou.net.client;
 
 public final class  RegData  {
 

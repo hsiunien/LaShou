@@ -1,4 +1,4 @@
-﻿package cn.duocool.lashou.net.client;
+package cn.duocool.lashou.net.client;
 
 import com.google.gson.Gson;
 import com.google.gson.JsonObject;

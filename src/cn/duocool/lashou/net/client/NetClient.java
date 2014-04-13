@@ -1,4 +1,4 @@
-﻿package cn.duocool.lashou.net.client;
+package cn.duocool.lashou.net.client;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -179,7 +179,7 @@ public class NetClient {
 	
 	/**
 	 * 上传头像
-	 * @param regData 注册数据
+	 * @param #requestCode  regData 注册数据
 	 */
 	public void uploadHeadIcon(final int requestCode, final UploadData uploadData) {
 		// Params, Progress, Result
@@ -302,7 +302,7 @@ public class NetClient {
 	
 	/**
 	 * 下载头像
-	 * @param regData 注册数据
+	 * @param requestCode 注册数据
 	 */
 	public void downloadHeadIcon(final int requestCode, final String userId) {
 		// Params, Progress, Result
@@ -464,7 +464,7 @@ public class NetClient {
 	
 	/**
 	 * 下载头像
-	 * @param regData 注册数据
+	 * @param userId 注册数据
 	 */
 	public void downloadHeadIconInStream(final int requestCode, final String userId) {
 		// Params, Progress, Result
@@ -551,7 +551,7 @@ public class NetClient {
 	
 	/**
 	 * 下载APK
-	 * @param regData 注册数据
+	 * @param requestCode 注册数据
 	 */
 	public void downloadApk(final int requestCode) {
 		// Params, Progress, Result
@@ -705,7 +705,7 @@ public class NetClient {
 	
 	/**
 	 * 注册用户信息
-	 * @param regData 注册数据
+	 * @param requestCode 注册数据
 	 */
 	public void getUserInfo(final int requestCode, final String userId) {
 		
@@ -753,7 +753,7 @@ public class NetClient {
 	/**
 	 * 获得用户的位置(指定用户，指定时间段)
 	 * @param userId 指定用户的位置
-	 * @param count 获得数据的条数
+	 * @param requestCode 获得数据的条数
 	 */
 	public void getLocationByTime(final int requestCode, final String userId,final String minTime,final String maxTime) {
 		// "getLocationByTime", // 25
@@ -787,7 +787,7 @@ public class NetClient {
 	/**
 	 * 获得用户的位置(指定用户，指定时间段)
 	 * @param userId 指定用户的位置
-	 * @param count 获得数据的条数
+	 * @param minTime 获得数据的条数
 	 */
 	public ResponseData getLocationByTimeSync(final String userId,final String minTime,final String maxTime) {
 		// "getLocationByTime", // 25
@@ -863,9 +863,9 @@ public class NetClient {
 	
 	/**
 	 * 根据用户 邮箱 密码 获得用户信息
-	 * @param uid
-	 * @param token
-	 * @param type 1 sina 2 qq
+	 * @param requestCode
+	 * @param email
+	 * @param pwd 1 sina 2 qq
 	 */
 	public void getUserInfoByEmailPwd(final int requestCode,final String email , final String pwd) {
 		
@@ -881,9 +881,9 @@ public class NetClient {
 	
 	/**
 	 * 根据用户 电话  密码 获得用户信息
-	 * @param uid
-	 * @param token
-	 * @param type 1 sina 2 qq
+	 * @param requestCode
+	 * @param pwd
+	 * @param phone 1 sina 2 qq
 	 */
 	public void getUserInfoByPhonePwd(final int requestCode,final String phone , final String pwd) {
 		
@@ -899,9 +899,8 @@ public class NetClient {
 	
 	/**
 	 * 获得好友列表
-	 * @param uid
-	 * @param token
-	 * @param type 1 sina 2 qq
+	 * @param requestCode
+	 * @param userId
 	 */
 	public void getRelationList(final int requestCode,final String userId) {
 		// "getRelationList", // 8
@@ -1194,8 +1193,7 @@ public class NetClient {
 	/**
 	 * 更新好友关系
 	 * @param requestCode
-	 * @param userId  自己的ID
-	 * @param friendId  对方的ID
+	 * @param relationData  自己的ID
 	 */
 	public void updateRelation(final int requestCode,final RelationData relationData) {
 			// updateRelation 14
@@ -1215,8 +1213,8 @@ public class NetClient {
 	/**
 	 * 检查唯一性：邮箱
 	 * @param requestCode
-	 * @param userId  自己的ID
-	 * @param friendId  对方的ID
+	 * @param requestCode  自己的ID
+	 * @param email  对方的ID
 	 */
 	public void checkExistEmail(final int requestCode,final String email) {
 		// "checkExistEmail", // 15
@@ -1234,8 +1232,7 @@ public class NetClient {
 	/**
 	 * 检查唯一性：电话
 	 * @param requestCode
-	 * @param userId  自己的ID
-	 * @param friendId  对方的ID
+	 * @param phone  自己的ID
 	 */
 	public void checkExistPhone(final int requestCode,final String phone) {
 		// "checkExistPhone", // 16
@@ -1254,8 +1251,8 @@ public class NetClient {
 	 * 检查唯一性：uid绑定 
 	 * type ： 1 sina  2 qq
 	 * @param requestCode
-	 * @param userId  自己的ID
-	 * @param friendId  对方的ID
+	 * @param uid  自己的ID
+	 * @param type  对方的ID
 	 */
 	public void checkExistUID(final int requestCode,final String uid,final String type) {
 		
@@ -1283,7 +1280,7 @@ public class NetClient {
 	
 	/**
 	 * 提交网络（同步版 用于子线程中使用）
-	 * @param requestCode
+	 * @param methodId
 	 * @param param
 	 */
 	private ResponseData submitBySync(final int methodId, final Map<String,String> param) {
