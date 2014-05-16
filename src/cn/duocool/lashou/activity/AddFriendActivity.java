@@ -41,49 +41,7 @@ NetTranListener{
 	
 	private LashouService lashouService;
 	private DaoBase dao;
-	
-//	@Override
-//	protected void onRestart() {
-//		// TODO Auto-generated method stub
-//		super.onRestart();
-//		
-//		lashouService = Tools.getApplication(this).getLashouService();
-//		dao = lashouService.getLockService().getDao();
-//		LockDao lockDao = new LockDao(this, dao);
-//		LockInfo lockInfo = lockDao.getDefaultLock();
-//		
-//		String lockType = lockInfo.getPasswordType();
-//		if (CommDef.LOCK_MODE_IMAGE.equals(lockType)) {
-//			// 图形锁
-//			Intent intent = new Intent(this,ImageLockActivity.class);
-//			intent.putExtra("lockName", lockInfo.getLockName());
-//			intent.putExtra("password", lockInfo.getPassword());
-//			intent.putExtra("question", lockInfo.getQuestion());
-//			intent.putExtra("answer", lockInfo.getAnswer());
-//			
-//			intent.putExtra("isBackClose", "close");
-//			ImageLockActivity.closeActivity  = this;
-//			
-//			startActivity(intent);
-////			this.finish();
-////			return;
-//		} else {
-//			// PIN锁
-//			Intent intent = new Intent(this,PasswordActivity.class);
-//			intent.putExtra("lockName", lockInfo.getLockName());
-//			intent.putExtra("password", lockInfo.getPassword());
-//			intent.putExtra("question", lockInfo.getQuestion());
-//			intent.putExtra("answer", lockInfo.getAnswer());
-//			
-//			intent.putExtra("isBackClose", "close");
-//			PasswordActivity.closeActivity  = this;
-//			
-//			startActivity(intent);
-////			this.finish();
-////			return;
-//		}
-//	}
-	
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -95,7 +53,7 @@ NetTranListener{
 		LockInfo lockInfo = lockDao.getDefaultLock();
 		
 		String lockType = lockInfo.getPasswordType();
-		if (Tools.getApplication(this).getLashouEdition() == CommDef.EDITION_CHILD) {
+		if (Tools.getApplication(this).getLashouEdition() == CommDef.EDITION_CHILD) {//如果是儿童版本
 			if (CommDef.LOCK_MODE_IMAGE.equals(lockType)) {
 				// 图形锁
 				Intent intent = new Intent(this,ImageLockActivity.class);

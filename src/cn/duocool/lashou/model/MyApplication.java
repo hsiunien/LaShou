@@ -89,9 +89,7 @@ public class MyApplication extends Application {
 	public boolean m_bKeyRight = true;
 	public static BMapManager mBMapManager = null;
 
-//	public static final String strKey = "E793e11645e14ee38b036f85bfe03df6";
-	public static final String strKey = "D2e1452ce3d2bc1a11251fb3ebc50617";
-	
+
 	/*
     	注意：为了给用户提供更安全的服务，Android SDK自v2.1.3版本开始采用了全新的Key验证体系。
     	因此，当您选择使用v2.1.3及之后版本的SDK时，需要到新的Key申请页面进行全新Key的申请，
@@ -110,7 +108,7 @@ public class MyApplication extends Application {
 			mBMapManager = new BMapManager(context);
 		}
 
-		if (!mBMapManager.init(strKey,new MyGeneralListener())) {
+		if (!mBMapManager.init(new MyGeneralListener())) {
 			Toast.makeText(MyApplication.getInstance().getApplicationContext(), 
 					"BMapManager  初始化错误!", Toast.LENGTH_LONG).show();
 		}

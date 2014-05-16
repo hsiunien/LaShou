@@ -6,9 +6,17 @@ package cn.duocool.lashou;
  * 如 地址 方法等。
  */
 public class CommDef {
-//	public final static String serverAddress = "http://duocool.cn/lashouserver/";
-	public final static String serverAddress = "http://115.28.147.227/lashouserver/";
-	
+    public static final  boolean DEBUG=true;//是否显示日志
+    public  static  final  boolean DEVELOP=false;//开发测试模式
+    //	public final static String serverAddress = "http://duocool.cn/lashouserver/";
+	public  static String serverAddress;
+    static {
+        if(DEVELOP){
+            serverAddress="http://192.168.1.105:8080/lashouserver/";
+        }else {
+            serverAddress="http://115.28.147.227/lashouserver/";
+        }
+    }
 	
 	public final static String headImg = "anxinbao/myHead.png";//默认头像截图保存路径
 	
@@ -34,7 +42,9 @@ public class CommDef {
 	 * 少儿版
 	 */
 	public final static int EDITION_CHILD = 90;
-	
+
+
+    public  final  static int FENCECYCLE=10*1000;
 	/**
 	 * 家长版
 	 */
@@ -61,6 +71,6 @@ public class CommDef {
 	 * 设定锁的形式
 	 */
 	public final static String LOCK_MODE_PIN = "figure";
-	
-	
+    public final static String BAIDU_LOCATION_KEY="sIOBVdOQyFlY5hwbahFVqKKX";
+    public  final  static  String WXappId="wx644ed164029da71e";
 }

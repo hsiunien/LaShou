@@ -9,6 +9,7 @@ import org.apache.http.client.params.CookiePolicy;
 import org.apache.http.client.params.HttpClientParams;
 import org.apache.http.impl.client.DefaultHttpClient;
 
+import cn.duocool.lashou.CommDef;
 import cn.duocool.lashou.R;
 import cn.duocool.lashou.model.MyApplication;
 import cn.duocool.lashou.model.MyLocation;
@@ -97,7 +98,7 @@ public class Set_Electronic_fence_PointActivity extends BaseActivity implements 
             /**
              * 如果BMapManager没有初始化则初始化BMapManager
              */
-            MyApplication.mBMapManager.init(MyApplication.strKey,new MyApplication.MyGeneralListener());
+            MyApplication.mBMapManager.init(new MyApplication.MyGeneralListener());
         }
 		//注意：请在使用setContentView前初始化BMapManager对象，否则会报错  
         

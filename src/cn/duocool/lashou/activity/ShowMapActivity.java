@@ -2,6 +2,7 @@ package cn.duocool.lashou.activity;
 
 import java.util.ArrayList;
 
+import cn.duocool.lashou.CommDef;
 import cn.duocool.lashou.R;
 import cn.duocool.lashou.activity.ShowTrackActivity.CustomItemizedOverlay;
 import cn.duocool.lashou.model.MyApplication;
@@ -108,7 +109,7 @@ public class ShowMapActivity extends BaseActivity {
             /**
              * 如果BMapManager没有初始化则初始化BMapManager
              */
-            MyApplication.mBMapManager.init(MyApplication.strKey,new MyApplication.MyGeneralListener());
+            MyApplication.mBMapManager.init(new MyApplication.MyGeneralListener());
         }
 		//注意：请在使用setContentView前初始化BMapManager对象，否则会报错  
         

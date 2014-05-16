@@ -132,7 +132,7 @@ implements OnTouchListener,OnClickListener,OnLongClickListener {
 	
 	/**
 	 * 初期化界面
-	 * @param context
+	 * @param
 	 */
 	private void initViews() {
 		
@@ -228,7 +228,7 @@ implements OnTouchListener,OnClickListener,OnLongClickListener {
 							nowW+boxW, 
 							nowH+boxH);
 					
-					Log.d("AAA", "nowChildNo left top righy bottom"+ nowChildNo+ " "+nowW +"  "+nowH+"  "+(nowW+boxW) +" "+(nowH+boxH));
+//					Log.d("AAA", "nowChildNo left top righy bottom"+ nowChildNo+ " "+nowW +"  "+nowH+"  "+(nowW+boxW) +" "+(nowH+boxH));
 					boxRect[nowChildNo].set(nowW, nowH, nowW+boxW, nowH+boxH);
 					dataList.get(nowChildNo).getRect().set(nowW, nowH, nowW+boxW, nowH+boxH);
 					nowChildNo++;
@@ -321,7 +321,7 @@ implements OnTouchListener,OnClickListener,OnLongClickListener {
 		
 		switch (event.getAction()) {
 			case MotionEvent.ACTION_DOWN:
-				Log.d("AAA", "onTouchEvent ACTION_DOWN");
+//				Log.d("AAA", "onTouchEvent ACTION_DOWN");
 				if (null !=  mScroller) {
 					if (!mScroller.isFinished()) {
 						mScroller.abortAnimation();
@@ -330,32 +330,32 @@ implements OnTouchListener,OnClickListener,OnLongClickListener {
 				mLastionMotionX = x;
 				break;
 			case MotionEvent.ACTION_MOVE:
-				Log.d("AAA", "onTouchEvent ACTION_MOVE mLongPress"+mLongPress);
+//				Log.d("AAA", "onTouchEvent ACTION_MOVE mLongPress"+mLongPress);
 			
 				int detaX = (int)(mLastionMotionX - x ); //每次滑动屏幕，屏幕应该移动的距离  
 				scrollBy(detaX, 0);//开始缓慢滑屏咯。 detaX > 0 向右滑动 ， detaX < 0 向左滑动 ，
-				Log.d("AAA", "--- MotionEvent.ACTION_MOVE--> detaX is " + detaX );  
+//				Log.d("AAA", "--- MotionEvent.ACTION_MOVE--> detaX is " + detaX );
 				mLastionMotionX = x ;
 				
 				break;
 			case MotionEvent.ACTION_UP:
-				Log.d("AAA", "onTouchEvent ACTION_UP");
+//				Log.d("AAA", "onTouchEvent ACTION_UP");
 				
 				 final VelocityTracker velocityTracker = mVelocityTracker  ;  
 		         velocityTracker.computeCurrentVelocity(1000);  
 		         
 		         //计算速率  
 				int velocityX = (int) velocityTracker.getXVelocity();
-				Log.d("AAA" , "---velocityX---" + velocityX); 
+//				Log.d("AAA" , "---velocityX---" + velocityX);
 				
 				// 滑动速率达到了一个标准(快速向left滑屏，返回上一个屏幕) 马上进行切屏处理  
 	            if (velocityX > SNAP_VELOCITY && curScreen > 0) {  
 	                // Fling enough to move left  
-	                Log.d("AAA", "snap left"); 
+//	                Log.d("AAA", "snap left");
 	                snapToScreen(curScreen - 1);
 	            }   //快速向right滑屏，返回下一个屏幕)  
 	            else if(velocityX < -SNAP_VELOCITY && curScreen < (getChildCount()-1)){  
-	                Log.d("AAA", "snap right");  
+//	                Log.d("AAA", "snap right");
 	                snapToScreen(curScreen + 1);  
 	            }  
 	            //以上为快速移动的 ，强制切换屏幕  
@@ -370,10 +370,10 @@ implements OnTouchListener,OnClickListener,OnLongClickListener {
 	            }  
 	            //修正mTouchState值  
 	            mTouchState = TOUCH_STATE_REST;
-	            Log.d("AAA", "--- MMotionEvent.ACTION_UP" );  
+//	            Log.d("AAA", "--- MMotionEvent.ACTION_UP" );
 				break;
 			case MotionEvent.ACTION_CANCEL:  
-				Log.d("AAA", "--- MotionEvent.ACTION_CANCEL" );  
+//				Log.d("AAA", "--- MotionEvent.ACTION_CANCEL" );
 	            mTouchState = TOUCH_STATE_REST ;  
 	            break;
 	
@@ -403,7 +403,7 @@ implements OnTouchListener,OnClickListener,OnLongClickListener {
 				continue;
 			}
 			TranslateAnimation moveAnim = new  TranslateAnimation(0,(toRect.left-data.getRect().left),0,(toRect.top-data.getRect().top));
-			Log.d("AAA", " moveAnim"+(toRect.left-data.getRect().left) + " " + (toRect.top-data.getRect().top));
+//			Log.d("AAA", " moveAnim"+(toRect.left-data.getRect().left) + " " + (toRect.top-data.getRect().top));
 			data.getRect().set(toRect.left, toRect.top, toRect.right, toRect.bottom);
 			moveAnim.setDuration(150);
 
@@ -498,7 +498,7 @@ implements OnTouchListener,OnClickListener,OnLongClickListener {
         //当前的偏移位置  
         int scrollX = getScrollX() ;  
           
-        Log.d("AAA", "### onTouchEvent snapToDestination ### scrollX is " + scrollX);  
+//        Log.d("AAA", "### onTouchEvent snapToDestination ### scrollX is " + scrollX);
         //判断是否超过下一屏的中间位置，如果达到就抵达下一屏，否则保持在原屏幕      
         //直接使用这个公式判断是哪一个屏幕 前后或者自己  
         //判断是否超过下一屏的中间位置，如果达到就抵达下一屏，否则保持在原屏幕  
@@ -506,7 +506,7 @@ implements OnTouchListener,OnClickListener,OnLongClickListener {
         //  我们目标屏所在位置了。 假如每个屏幕宽度为320dip, 我们滑到了500dip处，很显然我们应该到达第二屏  
         int destScreen = (getScrollX() + screenWidth / 2 ) / screenWidth ;  
           
-        Log.d("AAA", "### onTouchEvent  ACTION_UP### dx destScreen " + destScreen);  
+       // Log.d("AAA", "### onTouchEvent  ACTION_UP### dx destScreen " + destScreen);
           
         snapToScreen(destScreen);  
     }
@@ -516,23 +516,23 @@ implements OnTouchListener,OnClickListener,OnLongClickListener {
 	public void computeScroll() {
 		
 		if (!mLongPress){
-			Log.d("AAA", "computeScroll1 mHasPerformedLongPress");
+		///	Log.d("AAA", "computeScroll1 mHasPerformedLongPress");
 			if (mScroller.computeScrollOffset()) {  
-				Log.d("AAA", "mScroller.getCurrX()111"+mScroller.getCurrX());
+				//Log.d("AAA", "mScroller.getCurrX()111"+mScroller.getCurrX());
 				scrollTo(mScroller.getCurrX(), 0);
 				postInvalidate();
 			} 
 		}
 		
 		if (isMoveNextScreen) {
-			Log.d("AAA", "computeScroll2 isMoveNextScreen");
+		//	Log.d("AAA", "computeScroll2 isMoveNextScreen");
 			if (mScroller.computeScrollOffset()) {  
-				Log.d("AAA", "mScroller.getCurrX()222:"+mScroller.getCurrX());
+		//		Log.d("AAA", "mScroller.getCurrX()222:"+mScroller.getCurrX());
 				scrollTo(mScroller.getCurrX(), 0);
 				postInvalidate();
 			} 
 			if (mScroller.isFinished()) {
-				Log.d("AAA", "mScroller.isFinished()222"+mScroller.isFinished());
+		//		Log.d("AAA", "mScroller.isFinished()222"+mScroller.isFinished());
 				isMoveNextScreen = false;
 			}
 		}
@@ -620,7 +620,7 @@ implements OnTouchListener,OnClickListener,OnLongClickListener {
 				}
 				moveNextScreenCount = 0;
 			} else if (moveNextScreenCount <= -20) { // 计数到了20次了 就移动屏幕
-				Log.d("AAA", " 左移");
+		//		Log.d("AAA", " 左移");
 				curScreen = curScreen - 1;
 				if (curScreen<0) {
 					curScreen = 0;
@@ -716,7 +716,7 @@ implements OnTouchListener,OnClickListener,OnLongClickListener {
 						BoxItem xb = dataList.get(x);
 						Rect tr = xb.getRect();
 						int order = xb.getOrder();
-						Log.d("AAAA", "x2:"+x + " order" + order +" left"+tr.left+" top"+tr.top+" right"+tr.right+" bottom"+tr.bottom);
+			//			Log.d("AAAA", "x2:"+x + " order" + order +" left"+tr.left+" top"+tr.top+" right"+tr.right+" bottom"+tr.bottom);
 					}
 					moveBox();
 				}
@@ -725,7 +725,7 @@ implements OnTouchListener,OnClickListener,OnLongClickListener {
 		
 		// 弹起来
 		if (event.getAction() == MotionEvent.ACTION_UP || event.getAction() == MotionEvent.ACTION_CANCEL) {
-			Log.d("AAA", "BoxGridView ACTION_UP");
+	//		Log.d("AAA", "BoxGridView ACTION_UP");
 			
 			moveBox();
 			

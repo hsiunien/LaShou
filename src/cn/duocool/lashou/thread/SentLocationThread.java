@@ -16,6 +16,7 @@ import cn.duocool.lashou.net.client.NetClient;
  * @author 杞桅
  *
  */
+@Deprecated
 public class SentLocationThread extends Thread {
 //	private final static String TAG = SentLocationThread.class.getName();
 //	public boolean sentLocationThread_is_exit = false;//发送用户足迹的线程是否退出，true表示退出

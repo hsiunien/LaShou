@@ -20,6 +20,8 @@
         <dimen name="tip_width">190dip</dimen>
         <dimen name="tip_height">50dip</dimen>
         <!-- 时间限制提示的y坐标 -->
-         <dimen name="tip_y">200dip</dimen> 
-    
+         <dimen name="tip_y">200dip</dimen>
+    <dimen name="titlebar_left_margin">5dp</dimen>
+    <dimen name="titlebar_right_margin">10dp</dimen>
+
 </resources>

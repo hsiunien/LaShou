@@ -14,6 +14,7 @@ import org.apache.http.impl.client.DefaultHttpClient;
 import android.content.Context;
 import android.util.Log;
 
+import cn.duocool.lashou.CommDef;
 import cn.duocool.lashou.utils.Tools;
 import com.google.gson.Gson;
 
@@ -56,7 +57,7 @@ public class PushClient extends Thread {
 					if (null != userId && (!"".equals(userId.trim())) && (!"0".equals(userId.trim()))) {
 						pushedStartInUser(userId);
 					}
-					Thread.sleep(10);
+					Thread.sleep(500);
 				} else { // 网络部通畅的场合
 					Thread.sleep(1000);
 				}
@@ -103,11 +104,12 @@ public class PushClient extends Thread {
 		if (null != userId && (!("".equals(userId.trim()))))  {
 			requerUrl = requerUrl + "?userId="+userId;
 		}
-		
-		Log.i(TAG, "address:"+requerUrl);
 
-		Log.i(TAG, " key:"+userId+" value:"+userId);
-
+        if(CommDef.DEBUG) {
+            /*Log.i(TAG, "address:" + requerUrl);
+            Log.i(TAG, " key:" + userId + " value:" + userId);
+            */
+        }
 		
 		HttpGet get = new HttpGet(requerUrl);
 		
@@ -130,9 +132,10 @@ public class PushClient extends Thread {
 			
 			HttpResponse response = client.execute(get);
 			int code = response.getStatusLine().getStatusCode();
-			Log.i(TAG, "code:"+code);
+            if(CommDef.DEBUG) {
+             //   Log.i(TAG, "code:" + code);
+            }
 			if (code == 200) {
-				
 				List<Cookie> nowCookies = client.getCookieStore().getCookies();
 				Log.i(TAG,"nowCookies.isEmpty():"+nowCookies.isEmpty());
 				 if (!nowCookies.isEmpty()) {
@@ -140,8 +143,10 @@ public class PushClient extends Thread {
 					 for (int i = nowCookies.size()-1; i >= 0; i --) {
 			        	 Cookie cookie = nowCookies.get(i);
 			        	 cookies.add(cookie);
-			        	 Log.i(TAG,"cookie:"+cookie.getName() + "  " + cookie.getValue());
-			         }
+			        	 if(CommDef.DEBUG) {
+                      //       Log.i(TAG, "cookie:" + cookie.getName() + "  " + cookie.getValue());
+                         }
+                      }
 				 }
 				InputStream is = response.getEntity().getContent();
                 BufferedReader br = new BufferedReader(new InputStreamReader(is)); 

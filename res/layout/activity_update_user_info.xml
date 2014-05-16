@@ -23,7 +23,7 @@
             android:layout_margin="10dp" 
             android:background="@drawable/background_corners"
             android:ems="10"
-            android:inputType="textEmailAddress"
+            android:inputType="text"
             android:paddingBottom="10dp"
             android:paddingLeft="10dp"
             android:paddingTop="10dp"

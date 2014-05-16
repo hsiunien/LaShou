@@ -14,10 +14,8 @@ import cn.duocool.lashou.mywidget.WiperSwitch;
 import cn.duocool.lashou.mywidget.WiperSwitch.OnChangedListener;
 import cn.duocool.lashou.service.ElectronicFenceService;
 import cn.duocool.lashou.service.LashouService;
-import cn.duocool.lashou.service.LocationService;
-import cn.duocool.lashou.service.UploadLocationService;
+import cn.duocool.lashou.utils.Log;
 import cn.duocool.lashou.utils.Tools;
-import cn.duocool.lashou.activity.Set_Electronic_fence_TitleActivity;
 import cn.duocool.lashou.adapter.SetpersonAdapter;
 import cn.duocool.lashou.net.client.NetClient;
 import cn.duocool.lashou.net.client.NetTranListener;
@@ -38,7 +36,6 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.IBinder;
 import android.os.Message;
-import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.AdapterView;
@@ -303,14 +300,15 @@ public class AddElectronicFenceActivity extends BaseActivity implements NetTranL
 				//获取用户位置信息
 				int size =LashouService.locationList.size();
 				if(size==0){
-					Log.e(getClass().toString(), "好友位置列表为0");
-				}
-				MyLocation my_Location_temp;
-				my_Location_temp = LashouService.locationList.get(size-1);
-				Latitude = my_Location_temp.getLatitude();
-				Longitude = my_Location_temp.getLongitude();
-				address = my_Location_temp.getAddress();
-				flag=1;
+					Log.e(this, "我的位置列表信息是");
+				}else {
+                    MyLocation my_Location_temp;
+                    my_Location_temp = LashouService.locationList.get(size - 1);
+                    Latitude = my_Location_temp.getLatitude();
+                    Longitude = my_Location_temp.getLongitude();
+                    address = my_Location_temp.getAddress();
+                    flag = 1;
+                }
 			}
 		}
 		setPoint.setOnClickListener(new OnClickListener() {			

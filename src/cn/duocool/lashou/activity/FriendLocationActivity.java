@@ -20,6 +20,8 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import cn.duocool.lashou.CommDef;
 import cn.duocool.lashou.R;
 import cn.duocool.lashou.model.MyApplication;
 import cn.duocool.lashou.model.MyLocation;
@@ -86,7 +88,7 @@ public class FriendLocationActivity extends BaseActivity implements OnClickListe
 			/**
 			 * 如果BMapManager没有初始化则初始化BMapManager
 			 */
-			MyApplication.mBMapManager.init(MyApplication.strKey,new MyApplication.MyGeneralListener());
+			MyApplication.mBMapManager.init(new MyApplication.MyGeneralListener());
 		}
 
 		//加载视图
@@ -136,25 +138,6 @@ public class FriendLocationActivity extends BaseActivity implements OnClickListe
 		if (null == progressDialog) {
 			progressDialog = ProgressDialog.show(this, "请稍等...", "正在获取家人信息...", true,false);
 		}
-	}
-
-	@Override  
-	protected void onDestroy(){  
-		mMapView.destroy();  
-
-		super.onDestroy();  
-	}  
-	@Override  
-	protected void onPause(){  
-		mMapView.onPause();  
-
-		super.onPause();  
-	}  
-	@Override  
-	protected void onResume(){  
-		mMapView.onResume();  
-
-		super.onResume();  
 	}
 
 	@Override
@@ -388,17 +371,48 @@ public class FriendLocationActivity extends BaseActivity implements OnClickListe
 			super.onTap(pt,mapView);   
 			return false;   
 		}   
-		// 自2.1.1 开始，使用 add/remove 管理overlay , 无需重写以下接口   
-		/*  
-	        @Override  
-	        protected OverlayItem createItem(int i) {  
-	                return mGeoList.get(i);  
-	        }  
 
-	        @Override  
-	        public int size() {  
-	                return mGeoList.size();  
-	        }  
-		 */  
-	}           
+	}
+
+
+    @Override
+    protected void onPause() {
+        /**
+         *  MapView的生命周期与Activity同步，当activity挂起时需调用MapView.onPause()
+         */
+        mMapView.onPause();
+        super.onPause();
+    }
+
+    @Override
+    protected void onResume() {
+        /**
+         *  MapView的生命周期与Activity同步，当activity恢复时需调用MapView.onResume()
+         */
+        mMapView.onResume();
+        super.onResume();
+    }
+
+    @Override
+    protected void onDestroy() {
+        /**
+         *  MapView的生命周期与Activity同步，当activity销毁时需调用MapView.destroy()
+         */
+        mMapView.destroy();
+        super.onDestroy();
+    }
+
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        mMapView.onSaveInstanceState(outState);
+
+    }
+
+    @Override
+    protected void onRestoreInstanceState(Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+        mMapView.onRestoreInstanceState(savedInstanceState);
+    }
+
 }

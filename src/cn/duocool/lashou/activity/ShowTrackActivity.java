@@ -6,6 +6,7 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 
+import cn.duocool.lashou.CommDef;
 import cn.duocool.lashou.R;
 import cn.duocool.lashou.adapter.SetTrackAdapter;
 import cn.duocool.lashou.model.MyApplication;
@@ -117,8 +118,7 @@ public class ShowTrackActivity extends BaseActivity implements NetTranListener,
 			/**
 			 * 如果BMapManager没有初始化则初始化BMapManager
 			 */
-			MyApplication.mBMapManager.init(MyApplication.strKey,
-					new MyApplication.MyGeneralListener());
+			MyApplication.mBMapManager.init(new MyApplication.MyGeneralListener());
 		}
 
 		// 加载视图
@@ -361,7 +361,7 @@ public class ShowTrackActivity extends BaseActivity implements NetTranListener,
 					// 控件对齐方式
 					MapView.LayoutParams.BOTTOM_CENTER);
 			// 添加View到MapView中
-			mMapView.addView(button, layoutParam);
+		    mapView.addView(button, layoutParam);
 			return true;
 		}
 

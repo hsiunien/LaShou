@@ -8,10 +8,10 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Environment;
 import android.support.v4.util.LruCache;
-import android.util.Log;
 import android.widget.ImageView;
 
 import cn.duocool.lashou.model.UserInfo;
+import cn.duocool.lashou.utils.Log;
 import cn.duocool.lashou.utils.StringUtils;
 import cn.duocool.lashou.utils.download.DownLoadFile.DownloadListener;
 
@@ -84,7 +84,7 @@ public class ImageLoader {
 
 		@Override
 		public void onComplete(File file) {
-			Log.d(tag, "complete");
+			Log.d(this, "complete");
 			if (file == null) {
 				return;
 			}
@@ -96,7 +96,11 @@ public class ImageLoader {
 			if(userInfo!=null){
 				userInfo.setHeadImg(bmp);
 			}
-			putImage(url, bmp);
+            Log.d(this,url+" bitmap是空?"+(bmp==null));
+
+            if(bmp!=null){
+                putImage(url, bmp);
+            }
 			// imageCache.put(getFileName(url), bmp);
 		}
 	};

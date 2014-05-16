@@ -12,6 +12,8 @@ import android.os.IBinder;
 import android.os.Message;
 import android.os.SystemClock;
 import android.util.Log;
+
+import cn.duocool.lashou.CommDef;
 import cn.duocool.lashou.model.MyApplication;
 import cn.duocool.lashou.model.MyLocation;
 import cn.duocool.lashou.net.client.LocationData;
@@ -31,7 +33,7 @@ import com.baidu.platform.comapi.basestruct.GeoPoint;
  *
  */
 public class UploadLocationService extends Service implements BDLocationListener {
-	
+
 	private static final String TAG = UploadLocationService.class.getName();
 
 	
@@ -72,10 +74,8 @@ public class UploadLocationService extends Service implements BDLocationListener
 			/**
 			 * 如果BMapManager没有初始化则初始化BMapManager
 			 */
-			MyApplication.mBMapManager.init(MyApplication.strKey,new MyApplication.MyGeneralListener());
+			MyApplication.mBMapManager.init(new MyApplication.MyGeneralListener());
 		}
-
-	
 
 		mLocationClient = new LocationClient(this);//声明LocationClient类 
 		mLocationClient.registerLocationListener( this );//注册监听函数
@@ -225,10 +225,7 @@ public class UploadLocationService extends Service implements BDLocationListener
 		
 		if(Tools.getApplication(this).getLogin()){
 			userID = Tools.getApplication(this).getMyInfo().getUserId();
-			Log.i(TAG, "发送位置3");
 			if (null != LashouService.locationList && LashouService.locationList.size() > 0) {
-				Log.i(TAG, "发送位置4");
-
 				NetClient netClient = new NetClient();
 				LocationData data = new LocationData();
 				data.setLocationOrder(111);//无作用了
@@ -237,8 +234,7 @@ public class UploadLocationService extends Service implements BDLocationListener
 				data.setLongitude(LashouService.locationList.get(LashouService.locationList.size()-1).getLongitude());							
 				data.setTime(LashouService.locationList.get(LashouService.locationList.size()-1).getTime());
 				data.setUserID(userID);
-
-						netClient.uploadLocation(888,Integer.toString(userID),data);
+		    	netClient.uploadLocation(888,Integer.toString(userID),data);
 //				netClient.uploadLocationSync(Integer.toString(userID),data);
 			}
 		}

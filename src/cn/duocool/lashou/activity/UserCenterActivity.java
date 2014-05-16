@@ -35,11 +35,11 @@ import com.umeng.socialize.bean.SocializeEntity;
 import com.umeng.socialize.controller.RequestType;
 import com.umeng.socialize.controller.UMServiceFactory;
 import com.umeng.socialize.controller.UMSocialService;
-import com.umeng.socialize.controller.UMSsoHandler;
 import com.umeng.socialize.controller.listener.SocializeListeners.SocializeClientListener;
 import com.umeng.socialize.controller.listener.SocializeListeners.UMDataListener;
 import com.umeng.socialize.sso.QZoneSsoHandler;
 import com.umeng.socialize.sso.SinaSsoHandler;
+import com.umeng.socialize.sso.UMSsoHandler;
 
 public class UserCenterActivity extends Activity implements OnClickListener ,NetTranListener{
 	TitleBar titleBar;
@@ -73,7 +73,7 @@ public class UserCenterActivity extends Activity implements OnClickListener ,Net
 		findViewById(R.id.setPhone).setOnClickListener(this);//设置手机
 		findViewById(R.id.shareToSina).setOnClickListener(this);//设置新浪
 		findViewById(R.id.shareToQQ).setOnClickListener(this);//设置QQ
-		mController.getConfig().setSsoHandler(new SinaSsoHandler());
+		//mController.getConfig().setSsoHandler(new SinaSsoHandler());
 		mController.getConfig().setSsoHandler(new QZoneSsoHandler(this));
 	}
 	private boolean notBind(String str){

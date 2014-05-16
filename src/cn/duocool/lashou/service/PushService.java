@@ -19,7 +19,7 @@ import cn.duocool.lashou.net.client.PushListener;
 /**
  * 用于系统推送的服务
  * 
- * @author xwood
+ * @author hsiunien
  *
  */
 public class PushService extends Service implements PushListener {

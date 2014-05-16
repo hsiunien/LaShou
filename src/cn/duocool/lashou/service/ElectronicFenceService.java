@@ -6,6 +6,7 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 
+import cn.duocool.lashou.CommDef;
 import cn.duocool.lashou.R;
 import cn.duocool.lashou.activity.ShowMapActivity;
 import cn.duocool.lashou.model.MyElectronicFence;
@@ -92,7 +93,7 @@ public class ElectronicFenceService extends Service {
 						}
 					}
 					try {
-						Thread.sleep(3500);
+						Thread.sleep(CommDef.FENCECYCLE);//检测频率
 					} catch (InterruptedException e) {
 						e.printStackTrace();
 					}

@@ -11,15 +11,11 @@ import cn.duocool.lashou.dao.LockDao;
 import cn.duocool.lashou.model.LockInfo;
 import cn.duocool.lashou.model.UserInfo;
 import cn.duocool.lashou.mywidget.MyDialog;
-import cn.duocool.lashou.mywidget.setImagePasswordView;
 import cn.duocool.lashou.service.ElectronicFenceService;
 import cn.duocool.lashou.service.LashouService;
-import cn.duocool.lashou.service.LocationService;
-import cn.duocool.lashou.service.LockService;
 import cn.duocool.lashou.service.PushService;
 import cn.duocool.lashou.service.PushService.LocalService;
-import cn.duocool.lashou.thread.SentLocationThread;
-import cn.duocool.lashou.utils.AppTools;
+import cn.duocool.lashou.utils.Log;
 import cn.duocool.lashou.utils.StringUtils;
 import cn.duocool.lashou.utils.Tools;
 import cn.duocool.lashou.utils.download.ImageLoader;
@@ -27,45 +23,34 @@ import cn.duocool.lashou.view.box.BoxGridView;
 import cn.duocool.lashou.view.box.BoxItem;
 import cn.duocool.lashou.view.box.OnBoxClick;
 import cn.duocool.lashou.view.box.OnBoxViewChanged;
-import cn.duocool.lashou.net.client.NetClient;
-import cn.duocool.lashou.net.client.NetTranListener;
-import cn.duocool.lashou.net.client.PushData;
-import cn.duocool.lashou.net.client.ResponseData;
-import cn.duocool.lashou.net.client.UserData;
-
-import com.umeng.socialize.bean.SHARE_MEDIA;
-import com.umeng.socialize.controller.RequestType;
-import com.umeng.socialize.controller.UMServiceFactory;
-import com.umeng.socialize.controller.UMSocialService;
-import com.umeng.socialize.media.UMImage;
 
 import android.net.Uri;
 import android.os.Bundle;
-import android.os.Handler;
 import android.os.IBinder;
-import android.app.Activity;
-import android.app.AlertDialog;
 import android.content.ComponentName;
-import android.content.ContentValues;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.ServiceConnection;
 import android.content.SharedPreferences;
-import android.database.sqlite.SQLiteDatabase;
-import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.umeng.socialize.bean.SHARE_MEDIA;
+import com.umeng.socialize.controller.RequestType;
+import com.umeng.socialize.controller.UMServiceFactory;
+import com.umeng.socialize.controller.UMSocialService;
+import com.umeng.socialize.media.UMImage;
+import com.umeng.socialize.sso.UMWXHandler;
+
 public class ActivityHome extends BaseActivity  implements ServiceConnection{
 	private final static String TAG = ActivityHome.class.getName();
 	
 	ImageView myInfoImagv,bgImagV;//我的头像 背景图片
 	final UMSocialService mController = UMServiceFactory.getUMSocialService(
-			"com.umeng.share", RequestType.SOCIAL);
+            "com.umeng.share", RequestType.SOCIAL);
 	
 	// 图标
 	private int[] icons = { 
@@ -270,8 +255,7 @@ public class ActivityHome extends BaseActivity  implements ServiceConnection{
 			
 		};
 	// 删除不需要的分享平台 增加微信平台
-	String appId = "wx04be9dfd58afe096";//wx644ed164029da71e wxb023e4d25209ce09
-	String contentUrl ;	
+	String contentUrl ;
 	private String[] titles;
 //	private Handler handler=null;
 	MyDialog dialog;
@@ -388,119 +372,33 @@ public class ActivityHome extends BaseActivity  implements ServiceConnection{
 		
 		initialView();
 		bgImagV=(ImageView) findViewById(R.id.homeBg);
+        myInfoImagv = (ImageView) findViewById(R.id.myInfo);
+
 		sharedPreferences=getSharedPreferences("config", 0);
-		// 
-//		contentUrl=getResources().getString(R.string.share_link);
+ 		contentUrl=getResources().getString(R.string.share_link);
 		// 删除不需要的分享平台 增加微信平台
-		String appId = "wx04be9dfd58afe096";
-		mController.getConfig().removePlatform(SHARE_MEDIA.RENREN,
+ 		mController.getConfig().removePlatform(SHARE_MEDIA.RENREN,
 				SHARE_MEDIA.DOUBAN, SHARE_MEDIA.EMAIL);
-		mController.getConfig().supportWXPlatform(this, appId, getString(R.string.share_link));
-		mController.getConfig()
-				.supportWXCirclePlatform(this, appId, getString(R.string.share_link));
-		// mController.getConfig().setPlatforms(SHARE_MEDIA.QZONE,SHARE_MEDIA.SINA,SHARE_MEDIA.WEIXIN_CIRCLE,SHARE_MEDIA.WEIXIN);
-		myInfoImagv = (ImageView) findViewById(R.id.myInfo);
-//		handler=new Handler(){
-//			public void handleMessage(android.os.Message msg) {
-//				/*PushData  data=(PushData) msg.obj;
-//				final UserData userdata=data.getAttachmentUser();
-////				 0:加好友 1:响应加好友信息 同意  2:响应加好友信息 不同意  3:请求查看位置权限  4:响应请求查看权限 同意   5:响应请求查看权限 不同意    6:匿名消息   7:广告推送
-//				if(data.getPushType()==0){
-//					final MyDialog dialog = new MyDialog(ActivityHome.this);
-//					dialog.setTitle("好友申请");
-//					dialog.setContent(userdata.getNick() + "申请加您为好友");
-//					dialog.setTag(userdata);
-//					dialog.show();
-//					dialog.setButton1("同意", new OnClickListener() {
-//						@Override
-//						public void onClick(View v) {
-//							dialog.close();
-//							NetClient nc = new NetClient();
-//							nc.setOnNetTranListener(ActivityHome.this);
-//							nc.responseAddFriend(888,
-//									Tools.getApplication(ActivityHome.this)
-//											.getMyInfo().getUserId()
-//											+ "", ((UserData)dialog.getTag()).getUserId()  + "",
-//									"Y");
-//						}
-//					});
-//					dialog.setButton2("拒绝", new OnClickListener() {
-//						@Override
-//						public void onClick(View v) {
-//							dialog.close();
-//							NetClient nc = new NetClient();
-//							nc.setOnNetTranListener(ActivityHome.this);
-//							nc.responseAddFriend(888,
-//									Tools.getApplication(ActivityHome.this)
-//											.getMyInfo().getUserId()
-//											+ "", ((UserData)dialog.getTag()).getUserId() + "",
-//									"N");
-//						}
-//					});
-//				}else if(data.getPushType()==1){
-//					final MyDialog dialog=new MyDialog(ActivityHome.this);
-//					dialog.setTitle("好友申请");
-//					dialog.setContent(userdata.getNick()+"已经同意了您的申请");
-//					dialog.show();
-//					dialog.setButton1("我知道了", new OnClickListener() {
-//						@Override
-//						public void onClick(View v) {
-//							dialog.close();
-//						}
-//					});
-//				}else if(data.getPushType()==2){
-//					final MyDialog dialog=new MyDialog(ActivityHome.this);
-//					dialog.setTitle("好友申请");
-//					dialog.setContent(userdata.getNick()+" 拒绝 了您的申请");
-//					dialog.show();
-//					dialog.setButton1("我知道了", new OnClickListener() {
-//						@Override
-//						public void onClick(View v) {
-//							dialog.close();
-//						}
-//					});
-//				}else if(data.getPushType()==3){
-//					final MyDialog dialog=new MyDialog(ActivityHome.this);
-//					dialog.setTitle("权限申请");
-//					dialog.setContent(userdata.getNick()+" 向您申请位置查看");
-//					dialog.show();
-//					dialog.setButton1("同意", new OnClickListener() {
-//						@Override
-//						public void onClick(View v) {
-//							NetClient nc=new NetClient();
-//							nc.changViewRole(789, userdata.getUserId()+"",  Tools.getApplication(ActivityHome.this).getMyInfo().getUserId()+"", 3);
-//							dialog.close();
-//						}
-//					});
-//					dialog.setButton2("拒绝", new OnClickListener() {
-//						@Override
-//						public void onClick(View v) {
-//							NetClient nc=new NetClient();
-//							nc.changViewRole(789, userdata.getUserId()+"",  Tools.getApplication(ActivityHome.this).getMyInfo().getUserId()+"", 1);
-//							dialog.close();
-//						}
-//					});
-//							
-//				}	
-//			*/	
-//			};
-//		};
+        UMWXHandler wxHandler = mController.getConfig().supportWXPlatform(this, CommDef.WXappId, contentUrl);
+        wxHandler.setWXTitle("友盟社会化组件还不错...");
+// 支持微信朋友圈
+        UMWXHandler circleHandler = mController.getConfig().supportWXCirclePlatform(this, CommDef.WXappId, contentUrl) ;
+        circleHandler.setCircleTitle("友盟社会化组件还不错...");
+
 		//如果已经登录则创建服务push
 		if(Tools.getApplication(this).getLogin()){
 			Intent service=new Intent(this, PushService.class);
 			bindService(service, this, Context.BIND_AUTO_CREATE);
 		} 
-		//背景图片
-		
+
 		
 	}
 
 	@Override
 	protected void onResume() {
 		super.onResume();
-		Log.d(TAG, "设定现在的Activity名字："+ActivityHome.class.getName());
+		Log.d(this, "设定现在的Activity名字："+ActivityHome.class.getName());
 		Tools.getApplication(this).setNowActivityName(ActivityHome.class.getName());
-		
 		UserInfo user = Tools.getApplication(this).getMyInfo();
 		if (Tools.getApplication(this).getLogin()
 				&& Tools.getApplication(this).getMyInfo().getHeadImg() != null) {
@@ -602,7 +500,7 @@ public class ActivityHome extends BaseActivity  implements ServiceConnection{
 				startActivity(intent);
 				break;
 			case R.id.boxGridView1:
-				Log.d(getClass().toString(), "test");
+				Log.d(this, "test");
 				break;
 			default:
 				break;

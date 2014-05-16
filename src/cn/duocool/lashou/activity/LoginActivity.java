@@ -40,13 +40,13 @@ import com.umeng.socialize.bean.SocializeEntity;
 import com.umeng.socialize.controller.RequestType;
 import com.umeng.socialize.controller.UMServiceFactory;
 import com.umeng.socialize.controller.UMSocialService;
-import com.umeng.socialize.controller.UMSsoHandler;
 import com.umeng.socialize.controller.listener.SocializeListeners.SocializeClientListener;
 import com.umeng.socialize.controller.listener.SocializeListeners.UMAuthListener;
 import com.umeng.socialize.controller.listener.SocializeListeners.UMDataListener;
 import com.umeng.socialize.exception.SocializeException;
 import com.umeng.socialize.sso.QZoneSsoHandler;
 import com.umeng.socialize.sso.SinaSsoHandler;
+import com.umeng.socialize.sso.UMSsoHandler;
 
 public class LoginActivity extends BaseActivity implements OnClickListener,
 UMAuthListener, NetTranListener {
@@ -100,7 +100,7 @@ UMAuthListener, NetTranListener {
 		shareQQbutton.setOnClickListener(this);
 		loginButton = (Button) findViewById(R.id.btnOK);
 		loginButton.setOnClickListener(this);
-		mController.getConfig().setSsoHandler(new SinaSsoHandler());
+		//mController.getConfig().setSsoHandler(new SinaSsoHandler());
 		mController.getConfig().setSsoHandler(new QZoneSsoHandler(this));
 		// 注销用户的登录状态
 		mController.loginout(this, null);
@@ -332,7 +332,7 @@ UMAuthListener, NetTranListener {
 					getString(R.string.connectError), Toast.LENGTH_SHORT)
 					.show();
 		} else {
-			dialog.setMessage("失败代码" + code);
+			dialog.setMessage(getString(R.string.errCode)+code);
 			dialog.setCancelable(true);
 		}
 	}
@@ -468,7 +468,7 @@ UMAuthListener, NetTranListener {
 				}
 				this.finish();
 			}else{
-				Toast.makeText(this, "登录失败", Toast.LENGTH_SHORT).show();
+				Toast.makeText(this, data.getResponseMsg(), Toast.LENGTH_SHORT).show();
 				if(dialog.isShowing()){
 					dialog.dismiss();
 				}

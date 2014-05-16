@@ -14,6 +14,8 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="libs" level="project" />
+    <orderEntry type="module" module-name="social_sdk_library_project" />
+    <orderEntry type="library" exported="" name="libs3" level="project" />
   </component>
 </module>
 
