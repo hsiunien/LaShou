@@ -62,7 +62,6 @@ UMAuthListener, NetTranListener {
 	private UserInfo user;
 	private final int CHECKBIND = 888, CHECKSINABIND = 889,
 			GETLOGININFOBYTOKEN = 890,LOGINBYEMAIL=891,LOGINBYPHONE=892;
-
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -105,13 +104,11 @@ UMAuthListener, NetTranListener {
 		// 注销用户的登录状态
 		mController.loginout(this, null);
 	}
-
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		getMenuInflater().inflate(R.menu.activity_login, menu);
 		return true;
 	}
-
 	@Override
 	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 		super.onActivityResult(requestCode, resultCode, data);
@@ -123,7 +120,6 @@ UMAuthListener, NetTranListener {
 			ssoHandler.authorizeCallBack(requestCode, resultCode, data);
 		}
 	}
-
 	@Override
 	public void onClick(View v) {
 
@@ -140,9 +136,7 @@ UMAuthListener, NetTranListener {
 					new SocializeClientListener() {
 				@Override
 				public void onStart() {
-
 				}
-
 				@Override
 				public void onComplete(int code, SocializeEntity entity) {
 					if (code == 200) {
@@ -198,9 +192,7 @@ UMAuthListener, NetTranListener {
 					} else {
 						showConnectError(code);
 					}
-
 				}
-
 			});
 
 			break;
@@ -307,7 +299,6 @@ UMAuthListener, NetTranListener {
 			break;
 		}
 	}
-
 	/**
 	 * 检查输入合法性
 	 * @return true 合法
@@ -455,12 +446,6 @@ UMAuthListener, NetTranListener {
 				} else {
 					user.setHeadImg(imageLoader.getImage(url));
 				}
-//				//用户已登录，开启发送用户位置的线程
-//				SentLocationThread sentLocationThread = new SentLocationThread(this);
-//				SentLocationThread.sentLocationThread_is_exit = false;
-//				SentLocationThread.userID = Tools.getApplication(this).getMyInfo().getUserId();
-//				sentLocationThread.start();
-
 				Intent intent=new Intent(this, UserCenterActivity.class);
 				startActivity(intent); 
 				if(dialog.isShowing()){
@@ -474,24 +459,6 @@ UMAuthListener, NetTranListener {
 				}
 			}
 			break;
-			/*case LOGINBYPHONE:
-		case LOGINBYEMAIL:
-			if(StringUtils.equleIgnoreCase("ok", data.getResponseStatus())){
-				RegData rgdata=data.getRegData();
-				user.setUserId(rgdata.getUserId());
-				user.setQQUid(rgdata.getQqUid());
-				user.setQqToken(rgdata.getQqToken());
-				user.setSinaUid(rgdata.getSinaUid());
-				user.setSinaToken(rgdata.getSinaToken());
-				Tools.getApplication(this).setLoginState(true);
-			}else{
-				Toast.makeText(this, "登录失败", Toast.LENGTH_SHORT).show();
-			}
-			if(dialog.isShowing()){
-				dialog.dismiss();
-			}
-
-			break;*/
 		default:
 			break;
 		}

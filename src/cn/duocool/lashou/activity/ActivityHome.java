@@ -308,8 +308,6 @@ public class ActivityHome extends BaseActivity  implements ServiceConnection{
 	protected void onStop() {
 		// TODO Auto-generated method stub
 		super.onStop();
-		
-
 	}
 	
 	@Override

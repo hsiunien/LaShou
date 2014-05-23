@@ -1,0 +1,23 @@
+<component name="libraryTable">
+  <library name="libs3">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../social_sdk_library_project/libs/SocialSDK_facebook_1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../social_sdk_library_project/libs/SocialSDK_facebook_2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../social_sdk_library_project/libs/SocialSDK_instagram.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../social_sdk_library_project/libs/SocialSDK_laiwang_1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../social_sdk_library_project/libs/SocialSDK_laiwang_2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../social_sdk_library_project/libs/SocialSDK_QQZone_1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../social_sdk_library_project/libs/SocialSDK_QQZone_2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../social_sdk_library_project/libs/SocialSDK_Scrshot_Lib.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../social_sdk_library_project/libs/SocialSDK_Shake_Lib.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../social_sdk_library_project/libs/SocialSDK_tencentWB_1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../social_sdk_library_project/libs/SocialSDK_tencentWB_2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../social_sdk_library_project/libs/SocialSDK_WeiXin.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../social_sdk_library_project/libs/SocialSDK_yixin_1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../social_sdk_library_project/libs/SocialSDK_yixin_2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../social_sdk_library_project/libs/umeng_social_sdk.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

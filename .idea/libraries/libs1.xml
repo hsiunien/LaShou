@@ -1,0 +1,19 @@
+<component name="libraryTable">
+  <library name="libs1">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../open_treasure/libs/butterknife-4.0.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../open_treasure/libs/volley.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../open_treasure/libs/android-query.0.24.3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../open_treasure/libs/commons-pool-1.6.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../open_treasure/libs/locSDK3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../open_treasure/libs/date4j.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../open_treasure/libs/apache-mime4j-0.3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../open_treasure/libs/core.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../open_treasure/libs/commons-io-1.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../open_treasure/libs/httpmime-4.0-alpha4.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../open_treasure/libs/gson-2.2.2.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

@@ -65,9 +65,6 @@ import com.google.gson.reflect.TypeToken;
 public class NetClient {
 
     private final static String TAG = NetClient.class.getName();
-
-    //	private Context context;
-//	private Handler handler;
     private NetTranListener netTranListener;
     private NetTranProgressListener netTranProgressListener;
 
@@ -78,14 +75,7 @@ public class NetClient {
 
     // 命名空间
     String nameSpace = "http://services.server.axb.com/";
-    //    // 调用的方法名称
-//    String methodName = "download";
-    // EndPoint
-//    public static String baseEndPoint = "http://10.0.2.2:8080/lashouserver/";
-//  public static String baseEndPoint = "http://duocool.cn/lashouserver/";
     public static String baseEndPoint = CommDef.serverAddress;
-    //    String baseEndPoint = "http://10.0.2.2:8080/axbserver/";
-//    /String endPoint = "http://10.0.2.2:8080/axbserver/CXFService/AXBServiceBean";  
     String endPoint = baseEndPoint + "CXFService/serviceForAndroid/as/";
 
     public final static String[] methods = {
@@ -121,11 +111,6 @@ public class NetClient {
 
     public NetClient() {
     }
-
-//	public NetClient(Context context, Handler handler) {
-//		this.context = context;
-//		this.handler = handler;
-//	}
 
     public void setOnNetTranListener(NetTranListener netTranListener) {
         this.netTranListener = netTranListener;
@@ -1362,7 +1347,7 @@ public class NetClient {
         // 超时设置
         /* 从连接池中取连接的超时时间 */
         ConnManagerParams.setTimeout(params, 5000);
-		/* 连接超时 */
+        /* 连接超时 */
         HttpConnectionParams.setConnectionTimeout(params, 5000);
 		/* 请求超时 */
         HttpConnectionParams.setSoTimeout(params, 5000);
@@ -1564,7 +1549,8 @@ public class NetClient {
                         List<LocationData> locationDataList = gons.fromJson(
                                 responseHeader.getBody(),
                                 new TypeToken<List<LocationData>>() {
-                                }.getType());
+                                }.getType()
+                        );
                         rd.setLocationDataList(locationDataList);
                     }
                     return rd;
@@ -1591,7 +1577,8 @@ public class NetClient {
                         List<LocationData> locationDataList = gons.fromJson(
                                 responseHeader.getBody(),
                                 new TypeToken<List<LocationData>>() {
-                                }.getType());
+                                }.getType()
+                        );
                         rd.setLocationDataList(locationDataList);
                     }
                     return rd;
@@ -1662,7 +1649,8 @@ public class NetClient {
                         List<RelationData> locationDataList = gons.fromJson(
                                 responseHeader.getBody(),
                                 new TypeToken<ArrayList<RelationData>>() {
-                                }.getType());
+                                }.getType()
+                        );
                         rd.setRelationDataList(locationDataList);
                     }
                     return rd;

@@ -7,7 +7,6 @@ import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.ImageView;
@@ -26,6 +25,7 @@ import cn.duocool.lashou.mywidget.TitleBar;
 import cn.duocool.lashou.mywidget.WiperSwitch;
 import cn.duocool.lashou.mywidget.WiperSwitch.OnChangedListener;
 import cn.duocool.lashou.service.LashouService;
+import cn.duocool.lashou.utils.Log;
 import cn.duocool.lashou.utils.StringUtils;
 import cn.duocool.lashou.utils.Tools;
 import cn.duocool.lashou.utils.download.ImageLoader;
@@ -413,7 +413,7 @@ public class FriendInfoActivity extends BaseActivity implements OnClickListener,
 						public void onClick(View v) {
 							NetClient nc=new NetClient();
 							nc.setOnNetTranListener(FriendInfoActivity.this);
-							Log.d(getClass().toString(), myInfo.getUserId()+"|"+userData.getFriendId()+"");
+							Log.d(this, myInfo.getUserId() + "|" + userData.getFriendId() + "");
 							nc.requestSeeRole(788, myInfo.getUserId()+"", userData.getFriendId()+"");
 							dialog.close();
 						}
@@ -474,7 +474,7 @@ public class FriendInfoActivity extends BaseActivity implements OnClickListener,
 						public void onClick(View v) {
 							NetClient nc=new NetClient();
 							nc.setOnNetTranListener(FriendInfoActivity.this);
-							Log.d(getClass().toString(), myInfo.getUserId()+"|"+userData.getFriendId()+"");
+							Log.d(this, myInfo.getUserId()+"|"+userData.getFriendId()+"");
 							nc.requestSeeRole(788, myInfo.getUserId()+"", userData.getFriendId()+"");
 							dialog.close();
 						}

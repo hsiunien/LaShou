@@ -140,7 +140,7 @@
             android:paddingTop="10.0dip" >
 
             <ImageView
-                android:id="@+id/my_collect_image"
+                android:id="@+id/my_collect_image2"
                 android:layout_width="21.0dip"
                 android:layout_height="21.0dip"
                 android:layout_alignParentLeft="true"
@@ -150,16 +150,16 @@
                 android:textSize="18.0dip" />
 
             <TextView
-                android:id="@+id/my_collect_text"
+                android:id="@+id/my_collect_text2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
-                android:layout_toRightOf="@id/my_collect_image"
+                android:layout_toRightOf="@id/my_collect_image2"
                 android:paddingLeft="15.0dip"
                 android:text="查看足迹" />
 
             <ImageView
-                android:id="@+id/my_collect_arrow"
+                android:id="@+id/my_collect_arrow2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentRight="true"
