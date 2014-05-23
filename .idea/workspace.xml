@@ -41,7 +41,6 @@
     <list default="true" id="d1837427-738c-473b-8924-64090da7526c" name="Default" comment="finish">
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Uninstall_Statics/Uninstall_Statics.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Uninstall_Statics/src/com/example/untitled/SDCardListenSer.java" afterPath="$PROJECT_DIR$/../Uninstall_Statics/src/com/example/untitled/SDCardListenSer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <list id="13fd9071-0443-4d8c-a23e-d7d4df772e27" name="Rejected commit: Default" comment="测试" />
     <ignored path="LaShou.iws" />
@@ -562,7 +561,11 @@
       <created>1400850847271</created>
       <updated>1400850847271</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="finish">
+      <created>1400851179181</created>
+      <updated>1400851179181</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -636,7 +639,8 @@
     <MESSAGE value="update umeng sdk&#10;fix some bug" />
     <MESSAGE value="update umeng sdk&#10;fix some bugs" />
     <MESSAGE value="答辩最终版本" />
-    <option name="LAST_COMMIT_MESSAGE" value="答辩最终版本" />
+    <MESSAGE value="finish" />
+    <option name="LAST_COMMIT_MESSAGE" value="finish" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
