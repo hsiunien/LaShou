@@ -152,7 +152,6 @@ public class RegActivity extends BaseActivity implements OnClickListener,
 	}
 
 	private boolean checkInfo() {
-
 		if(StringUtils.isEmpty(et_email.getText().toString())&&StringUtils.isEmpty(et_phone.getText().toString())){
 			  Toast.makeText(this, "手机号码或者邮箱号至少填写一项 ", Toast.LENGTH_SHORT).show();
 				return false;	
