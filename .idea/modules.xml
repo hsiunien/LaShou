@@ -4,7 +4,6 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/../毕设自愿/BaiduMap_AndroidSDK_v2.4.1_All/BaiduMapsApiDemo/BaiduMapsApiDemo.iml" filepath="$PROJECT_DIR$/../毕设自愿/BaiduMap_AndroidSDK_v2.4.1_All/BaiduMapsApiDemo/BaiduMapsApiDemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/LaShou.iml" filepath="$PROJECT_DIR$/LaShou.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../Uninstall_Statics/Uninstall_Statics.iml" filepath="$PROJECT_DIR$/../Uninstall_Statics/Uninstall_Statics.iml" />
       <module fileurl="file://$PROJECT_DIR$/../毕设自愿/WeChatSDK_Android/WeChatSDK_Android.iml" filepath="$PROJECT_DIR$/../毕设自愿/WeChatSDK_Android/WeChatSDK_Android.iml" />
       <module fileurl="file://$PROJECT_DIR$/../temp/goldmine/goldmine.iml" filepath="$PROJECT_DIR$/../temp/goldmine/goldmine.iml" />
       <module fileurl="file://$PROJECT_DIR$/../social_sdk_library_project/social_sdk_library_project.iml" filepath="$PROJECT_DIR$/../social_sdk_library_project/social_sdk_library_project.iml" />
